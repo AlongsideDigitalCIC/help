@@ -1,4 +1,4 @@
-﻿---
+---
 title: Events, Services & RSVPs
 description: Plan church services, charity fundraisers, community sessions, and track attendee RSVPs.
 ---

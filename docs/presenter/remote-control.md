@@ -1,4 +1,4 @@
-﻿---
+---
 title: Mobile Remote Control & Live Viewer
 description: Control slides and monitor output from a smartphone or tablet over local Wi-Fi.
 ---

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Song Library & CCLI SongSelect
 description: Manage your worship repertoire, import CCLI SongSelect lyrics, display copyright attributions, and export CCLI reports.
 ---

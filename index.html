@@ -844,6 +844,7 @@
             let meta = {};
 
             // 1. Parse and strip YAML Frontmatter (from Pages CMS / Markdown files)
+            content = content.replace(/^\uFEFF/, '');
             const fmMatch = content.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?/);
             if (fmMatch) {
               content = content.slice(fmMatch[0].length);

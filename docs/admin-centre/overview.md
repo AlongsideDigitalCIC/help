@@ -1,4 +1,4 @@
-﻿---
+---
 title: Admin Centre Overview
 description: Introducing Alongside Digital's adaptive management platform for churches and community non-profits.
 ---

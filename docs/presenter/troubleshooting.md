@@ -1,4 +1,4 @@
-﻿---
+---
 title: Sunday Morning Troubleshooter
 description: Quick, 60-second fixes for common live presentation issues.
 ---

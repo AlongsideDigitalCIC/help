@@ -1,4 +1,4 @@
-﻿---
+---
 title: Volunteer Rotas & Clash Detection
 description: Build rotas, prevent scheduling conflicts, and manage volunteer swaps.
 ---

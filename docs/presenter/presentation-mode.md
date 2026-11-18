@@ -1,4 +1,4 @@
-﻿---
+---
 title: Display & Dual-Screen Setup
 description: How to configure Windows, macOS, and Presenter for multi-display projection.
 ---

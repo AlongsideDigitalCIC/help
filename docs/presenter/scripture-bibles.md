@@ -1,4 +1,4 @@
-﻿---
+---
 title: Scripture & Bible Versions
 description: Look up, format, and display scripture readings during services.
 ---

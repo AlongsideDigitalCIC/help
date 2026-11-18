@@ -1,4 +1,4 @@
-﻿---
+---
 title: Organisation Setup & Tailoring
 description: Configure terminology, modules, and team settings for your organisation type.
 ---

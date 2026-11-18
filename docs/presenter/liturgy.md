@@ -1,4 +1,4 @@
-﻿---
+---
 title: Liturgy & Responsive Readings
 description: Build call-and-response prayers, creeds, and liturgies with speaker colour coding.
 ---

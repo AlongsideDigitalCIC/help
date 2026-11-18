@@ -1,4 +1,4 @@
-﻿---
+---
 title: Presenter Quick Start Guide
 description: Get up and running with Presenter in under 5 minutes for your church service or event.
 ---

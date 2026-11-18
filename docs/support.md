@@ -1,4 +1,4 @@
-﻿---
+---
 title: Contact & Support
 description: How to get help from Alongside Digital for Presenter and Admin Centre.
 ---

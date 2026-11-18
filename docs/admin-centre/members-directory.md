@@ -1,4 +1,4 @@
-﻿---
+---
 title: Member Directory & GDPR Consents
 description: Manage people, households, contact permissions, and UK GDPR compliance.
 ---

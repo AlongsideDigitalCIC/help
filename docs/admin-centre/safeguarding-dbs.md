@@ -1,4 +1,4 @@
-﻿---
+---
 title: Safeguarding & DBS Compliance
 description: Manage DBS check dates, renewal notifications, and safeguarding officer permissions.
 ---

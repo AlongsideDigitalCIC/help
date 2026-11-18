@@ -1,4 +1,4 @@
-﻿---
+---
 title: Automated Reminders & Notifications
 description: Configure email, SMS, and WhatsApp alerts for rotas and events.
 ---

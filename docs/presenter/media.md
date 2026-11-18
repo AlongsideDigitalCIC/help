@@ -1,4 +1,4 @@
-﻿---
+---
 title: Media Playback (Video, Audio & PDF)
 description: Project videos, background music playlists, and PDF slide decks seamlessly.
 ---

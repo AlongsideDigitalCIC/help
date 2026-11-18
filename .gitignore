@@ -1,0 +1,17 @@
+# Build output
+dist/
+.astro/
+
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.*
+
+# Local raw screen recordings (for screenshot extraction)
+raw-videos/
+
+# OS generated files
+.DS_Store
+Thumbs.db

@@ -1,11 +1,85 @@
-media: media
+media:
+  input: docs/media
+  output: media
+
 content:
-  - name: pages
-    label: Help Pages
+  - name: presenter
+    label: Presenter Guides
     type: collection
-    path: docs
+    path: docs/presenter
+    filename: "{primary}.md"
+    view:
+      fields: [title, description]
+      primary: title
     fields:
       - name: title
+        label: Title
+        type: string
+        required: true
+      - name: description
+        label: Short Description
         type: string
       - name: body
+        label: Guide Content
         type: rich-text
+
+  - name: admin-centre
+    label: Admin Centre Guides
+    type: collection
+    path: docs/admin-centre
+    filename: "{primary}.md"
+    view:
+      fields: [title, description]
+      primary: title
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: description
+        label: Short Description
+        type: string
+      - name: body
+        label: Guide Content
+        type: rich-text
+
+  - name: home
+    label: Help Centre Homepage
+    type: file
+    path: docs/README.md
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: description
+        label: Description
+        type: string
+      - name: body
+        label: Content
+        type: rich-text
+
+  - name: support
+    label: Contact & Support Page
+    type: file
+    path: docs/support.md
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: description
+        label: Description
+        type: string
+      - name: body
+        label: Content
+        type: rich-text
+
+  - name: sidebar
+    label: Sidebar Navigation
+    type: file
+    path: docs/_sidebar.md
+    fields:
+      - name: body
+        label: Sidebar Links (Markdown)
+        type: code
+        options:
+          language: markdown

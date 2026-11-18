@@ -1,27 +1,1089 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alongside Digital Help Centre</title>
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <meta name="description" content="Find step-by-step guides, tutorials, and troubleshooting tips for Presenter and Admin Centre by Alongside Digital.">
+  <link rel="icon" type="image/png" href="public/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+
   <style>
     :root {
-      --theme-color: #007acc; 
+      /* Official Alongside Digital Brand Palette */
+      --background: #FAF6F0;
+      --bg-alt: #F0EBE1;
+      --foreground: #1C355E;
+      --primary: #7A502A;          /* Collaboration Copper */
+      --primary-hover: #653F1E;
+      --secondary: #3D7B8C;        /* Sea Glass Teal */
+      --secondary-hover: #2E606D;
+      --card: #FFFFFF;
+      --border: #E2D9C8;
+      --text-main: #1C355E;
+      --text-muted: rgba(28, 53, 94, 0.72);
+      --theme-color: #7A502A;
+      --header-height: 68px;
+      --font-main: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      background-color: var(--background) !important;
+      color: var(--text-main) !important;
+      font-family: var(--font-main) !important;
+      -webkit-font-smoothing: antialiased;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ========================================================
+       STICKY TOP HEADER (LOGO LEFT, SEARCH CENTRED)
+       ======================================================== */
+    .ad-topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--header-height);
+      background: rgba(250, 246, 240, 0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1.5rem;
+    }
+
+    .ad-topbar-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      z-index: 2;
+      flex-shrink: 0;
+    }
+
+    .ad-logo-link {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .ad-logo-link img {
+      height: 42px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .ad-mobile-menu-btn {
+      display: none;
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--foreground);
+      width: 40px;
+      height: 40px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    /* Centred Search Bar */
+    .ad-search-center {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 480px;
+      z-index: 10;
+    }
+
+    .ad-search-box {
+      position: relative;
+      width: 100%;
+    }
+
+    .ad-search-icon {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--primary);
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .ad-search-input {
+      width: 100%;
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 9999px;
+      padding: 0.62rem 4.2rem 0.62rem 2.65rem;
+      font-family: var(--font-main);
+      font-size: 0.95rem;
+      color: var(--foreground);
+      box-shadow: 0 2px 8px rgba(28, 53, 94, 0.04);
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .ad-search-input::placeholder {
+      color: rgba(28, 53, 94, 0.52);
+    }
+
+    .ad-search-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 4px 16px rgba(122, 80, 42, 0.14);
+    }
+
+    .ad-search-kbd {
+      position: absolute;
+      right: 0.9rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--background);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.15rem 0.45rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+
+    /* Search Dropdown Results */
+    .ad-search-results {
+      position: absolute;
+      top: calc(100% + 0.5rem);
+      left: 0;
+      right: 0;
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 18px 40px rgba(28, 53, 94, 0.14);
+      max-height: 420px;
+      overflow-y: auto;
+      display: none;
+      padding: 0.5rem;
+      z-index: 300;
+    }
+
+    .ad-search-results.open {
+      display: block;
+    }
+
+    .ad-search-item {
+      display: block;
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      text-decoration: none !important;
+      color: var(--foreground) !important;
+      transition: background 0.15s ease;
+    }
+
+    .ad-search-item:hover {
+      background: var(--background);
+    }
+
+    .ad-search-item-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .ad-search-item-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--foreground);
+    }
+
+    .ad-search-item-badge {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.15rem 0.5rem;
+      border-radius: 9999px;
+      background: var(--bg-alt);
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+
+    .ad-search-item-snippet {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+      margin: 0;
+    }
+
+    .ad-search-item-snippet mark {
+      background: rgba(122, 80, 42, 0.16);
+      color: var(--primary);
+      font-weight: 600;
+      border-radius: 3px;
+      padding: 0 2px;
+    }
+
+    .ad-search-empty {
+      padding: 1.25rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* ========================================================
+       SIDEBAR (MATCHES ADMIN CENTRE DESIGN)
+       ======================================================== */
+    .sidebar {
+      top: var(--header-height) !important;
+      background-color: var(--background) !important;
+      border-right: 1px solid var(--border) !important;
+      padding: 1.25rem 0.85rem 2rem !important;
+      width: 280px !important;
+      font-family: var(--font-main) !important;
+    }
+
+    /* Hide default Docsify sidebar app-name & default toggle button */
+    .sidebar > h1.app-name,
+    .sidebar-toggle {
+      display: none !important;
+    }
+
+    .sidebar-nav {
+      padding-bottom: 2rem;
+    }
+
+    .sidebar-nav ul {
+      margin: 0 !important;
+      padding: 0 !important;
+      list-style: none !important;
+    }
+
+    /* Category Headings (START HERE, PRESENTER, ADMIN CENTRE) */
+    .sidebar-nav > ul > li {
+      margin-bottom: 1.25rem !important;
+    }
+
+    .sidebar-nav > ul > li > p,
+    .sidebar-nav > ul > li > strong {
+      display: block !important;
+      color: #8C7360 !important;
+      font-size: 0.72rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.08em !important;
+      text-transform: uppercase !important;
+      padding: 0 0.75rem !important;
+      margin: 0.5rem 0 0.45rem !important;
+    }
+
+    /* Sidebar Links */
+    .sidebar-nav ul li a {
+      display: block !important;
+      color: var(--foreground) !important;
+      font-size: 0.92rem !important;
+      font-weight: 500 !important;
+      line-height: 1.4 !important;
+      border-radius: 8px !important;
+      padding: 0.52rem 0.85rem !important;
+      margin: 0.15rem 0 !important;
+      border-right: none !important;
+      text-decoration: none !important;
+      transition: all 0.15s ease !important;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .sidebar-nav ul li a:hover {
+      background-color: rgba(122, 80, 42, 0.08) !important;
+      color: var(--primary) !important;
+      text-decoration: none !important;
+    }
+
+    /* Active Page Pill - Solid Collaboration Copper (#7A502A) */
+    .sidebar-nav > ul > li > ul > li.active > a,
+    .sidebar-nav > ul > li.active > a {
+      background-color: var(--primary) !important;
+      color: #FFFFFF !important;
+      font-weight: 600 !important;
+      border-radius: 8px !important;
+      box-shadow: 0 4px 12px rgba(122, 80, 42, 0.2) !important;
+    }
+
+    /* Sub-headings table of contents inside sidebar */
+    .sidebar-nav ul.app-sub-sidebar {
+      margin-top: 0.25rem !important;
+      margin-bottom: 0.5rem !important;
+      padding-left: 0.85rem !important;
+      border-left: 2px solid var(--border) !important;
+      margin-left: 0.85rem !important;
+    }
+
+    .sidebar-nav ul.app-sub-sidebar li a {
+      font-size: 0.83rem !important;
+      padding: 0.35rem 0.65rem !important;
+      color: var(--text-muted) !important;
+      background: transparent !important;
+      box-shadow: none !important;
+      font-weight: 500 !important;
+    }
+
+    .sidebar-nav ul.app-sub-sidebar li a::before {
+      content: none !important;
+    }
+
+    .sidebar-nav ul.app-sub-sidebar li.active > a,
+    .sidebar-nav ul.app-sub-sidebar li a:hover {
+      color: var(--primary) !important;
+      font-weight: 600 !important;
+      background: rgba(122, 80, 42, 0.06) !important;
+    }
+
+    /* ========================================================
+       MAIN CONTENT AREA & TYPOGRAPHY
+       ======================================================== */
+    .content {
+      top: var(--header-height) !important;
+      left: 280px !important;
+      padding-top: 1rem !important;
+    }
+
+    .markdown-section {
+      max-width: 920px !important;
+      padding: 2rem 2.5rem 5rem !important;
+      color: var(--text-main) !important;
+    }
+
+    .markdown-section h1,
+    .markdown-section h2,
+    .markdown-section h3,
+    .markdown-section h4 {
+      color: var(--foreground) !important;
+      font-family: var(--font-main) !important;
+      font-weight: 700 !important;
+      line-height: 1.25 !important;
+    }
+
+    .markdown-section h1 {
+      font-size: clamp(2rem, 3.5vw, 2.65rem) !important;
+      letter-spacing: -0.5px;
+      margin-top: 0 !important;
+      margin-bottom: 0.5rem !important;
+    }
+
+    .ad-page-lead {
+      font-size: 1.12rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .markdown-section h2 {
+      font-size: 1.55rem !important;
+      margin-top: 2.25rem !important;
+      margin-bottom: 1rem !important;
+      padding-bottom: 0.4rem;
+      border-bottom: none !important;
+    }
+
+    .markdown-section h3 {
+      font-size: 1.2rem !important;
+      margin-top: 1.5rem !important;
+      margin-bottom: 0.6rem !important;
+    }
+
+    .markdown-section p,
+    .markdown-section ul,
+    .markdown-section ol {
+      color: var(--text-main) !important;
+      font-size: 1rem !important;
+      line-height: 1.68 !important;
+    }
+
+    .markdown-section a {
+      color: var(--secondary) !important;
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .markdown-section a:hover {
+      color: var(--primary) !important;
+    }
+
+    .markdown-section hr {
+      border: none !important;
+      border-top: 1px solid var(--border) !important;
+      margin: 2.25rem 0 !important;
+    }
+
+    .markdown-section code {
+      background-color: #EDE6DC !important;
+      color: var(--foreground) !important;
+      border-radius: 6px !important;
+      padding: 0.18rem 0.42rem !important;
+      font-size: 0.88em !important;
+    }
+
+    .markdown-section pre {
+      background-color: #FFFFFF !important;
+      border: 1px solid var(--border) !important;
+      border-radius: 12px !important;
+      padding: 1.25rem !important;
+    }
+
+    /* Tables */
+    .markdown-section table {
+      display: table !important;
+      width: 100% !important;
+      border-collapse: collapse !important;
+      background: #FFFFFF !important;
+      border: 1px solid var(--border) !important;
+      border-radius: 12px !important;
+      overflow: hidden !important;
+      margin: 1.5rem 0 !important;
+      box-shadow: 0 4px 16px rgba(28, 53, 94, 0.04);
+    }
+
+    .markdown-section table tr {
+      border-top: 1px solid var(--border) !important;
+      background-color: #FFFFFF !important;
+    }
+
+    .markdown-section table tr:nth-child(2n) {
+      background-color: #FAF6F0 !important;
+    }
+
+    .markdown-section table th {
+      background-color: var(--bg-alt) !important;
+      color: var(--foreground) !important;
+      font-weight: 700 !important;
+      text-align: left !important;
+      padding: 0.85rem 1rem !important;
+      border: 1px solid var(--border) !important;
+    }
+
+    .markdown-section table td {
+      padding: 0.75rem 1rem !important;
+      border: 1px solid var(--border) !important;
+      color: var(--text-main) !important;
+    }
+
+    /* ========================================================
+       HOMEPAGE HERO & PRODUCT TILES (PERFECTLY IN LINE)
+       ======================================================== */
+    .ad-hero {
+      text-align: center;
+      padding: 2rem 1rem 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .ad-hero h1 {
+      color: var(--foreground) !important;
+      font-size: clamp(2.2rem, 4.5vw, 3.35rem) !important;
+      font-weight: 800 !important;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.75rem !important;
+    }
+
+    .ad-hero .ad-tagline {
+      color: var(--primary) !important;
+      font-size: clamp(1.08rem, 2vw, 1.3rem) !important;
+      font-weight: 600 !important;
+      max-width: 700px;
+      margin: 0 auto 1.85rem !important;
+      line-height: 1.5 !important;
+    }
+
+    .ad-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.15rem;
+      justify-content: center;
+    }
+
+    .ad-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      border-radius: 9999px;
+      padding: 0.85rem 2.15rem;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none !important;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .ad-btn-primary {
+      background-color: var(--primary) !important;
+      color: #FFFFFF !important;
+      border: 2px solid transparent;
+      box-shadow: 0 8px 20px rgba(122, 80, 42, 0.24);
+    }
+
+    .ad-btn-primary:hover {
+      background-color: var(--primary-hover) !important;
+      color: #FFFFFF !important;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(122, 80, 42, 0.32);
+    }
+
+    .ad-btn-secondary {
+      background-color: transparent !important;
+      color: var(--foreground) !important;
+      border: 2px solid rgba(28, 53, 94, 0.2);
+    }
+
+    .ad-btn-secondary:hover {
+      border-color: var(--foreground);
+      background-color: rgba(28, 53, 94, 0.05) !important;
+      color: var(--foreground) !important;
+      transform: translateY(-2px);
+    }
+
+    /* Product Cards Grid - Equal Height & Side-by-Side */
+    .ad-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.85rem;
+      align-items: stretch;
+      margin: 1.5rem 0 2.5rem;
+    }
+
+    .ad-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2.15rem;
+      box-shadow: 0 10px 30px rgba(28, 53, 94, 0.06);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .ad-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 38px rgba(28, 53, 94, 0.12);
+      border-color: var(--primary);
+    }
+
+    .ad-card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .ad-card-header h3 {
+      margin: 0 !important;
+      font-size: 1.45rem !important;
+      font-weight: 700 !important;
+      color: var(--foreground) !important;
+    }
+
+    .ad-card-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+
+    .ad-card-desc {
+      color: var(--text-muted) !important;
+      font-size: 0.96rem !important;
+      margin: 0 0 1rem !important;
+    }
+
+    .ad-card-links {
+      list-style: none !important;
+      padding: 0 !important;
+      margin: 0.5rem 0 1.25rem !important;
+      flex-grow: 1;
+    }
+
+    .ad-card-links li {
+      padding: 0.52rem 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      margin: 0 !important;
+    }
+
+    .ad-card-links li:last-child {
+      border-bottom: none;
+    }
+
+    .ad-card-links li a {
+      color: var(--foreground) !important;
+      text-decoration: none !important;
+      font-weight: 500 !important;
+      transition: color 0.15s ease;
+    }
+
+    .ad-card-links li a:hover {
+      color: var(--primary) !important;
+      text-decoration: underline !important;
+    }
+
+    .ad-card-cta {
+      display: inline-flex;
+      align-items: center;
+      color: var(--secondary) !important;
+      font-weight: 600 !important;
+      text-decoration: none !important;
+      margin-top: auto;
+    }
+
+    .ad-card-cta:hover {
+      color: var(--primary) !important;
+    }
+
+    /* ========================================================
+       BRANDED CALLOUTS & ASIDES (COPPER & TEAL - NO PURPLE)
+       ======================================================== */
+    .ad-callout {
+      border-radius: 12px;
+      border-left: 4px solid var(--primary);
+      background: rgba(122, 80, 42, 0.08);
+      padding: 1.15rem 1.4rem;
+      margin: 1.65rem 0;
+    }
+
+    .ad-callout-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--primary);
+      margin: 0 0 0.4rem !important;
+    }
+
+    .ad-callout-body p:last-child {
+      margin-bottom: 0 !important;
+    }
+
+    .ad-callout--note {
+      border-left-color: var(--secondary);
+      background: rgba(61, 123, 140, 0.08);
+    }
+
+    .ad-callout--note .ad-callout-title {
+      color: var(--secondary);
+    }
+
+    .ad-callout--danger {
+      border-left-color: #A83232;
+      background: rgba(168, 50, 50, 0.08);
+    }
+
+    .ad-callout--danger .ad-callout-title {
+      color: #A83232;
+    }
+
+    /* ========================================================
+       MOBILE RESPONSIVENESS (< 768px)
+       ======================================================== */
+    @media (max-width: 768px) {
+      .ad-topbar {
+        padding: 0 0.85rem;
+        gap: 0.65rem;
+      }
+
+      .ad-mobile-menu-btn {
+        display: inline-flex;
+      }
+
+      .ad-logo-link img {
+        height: 32px;
+      }
+
+      .ad-search-center {
+        position: static;
+        transform: none;
+        flex: 1;
+        max-width: none;
+      }
+
+      .ad-search-input {
+        padding: 0.5rem 0.9rem 0.5rem 2.25rem;
+        font-size: 0.88rem;
+      }
+
+      .ad-search-kbd {
+        display: none;
+      }
+
+      .sidebar {
+        transform: translateX(-100%) !important;
+        transition: transform 0.25s ease !important;
+        z-index: 190 !important;
+        box-shadow: 8px 0 24px rgba(28, 53, 94, 0.12);
+      }
+
+      body.ad-sidebar-open .sidebar {
+        transform: translateX(0) !important;
+      }
+
+      .content {
+        left: 0 !important;
+      }
+
+      .markdown-section {
+        padding: 1.5rem 1.15rem 4rem !important;
+      }
+
+      .ad-card-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
+
+      .ad-card {
+        padding: 1.5rem;
+      }
+
+      .ad-hero-actions {
+        flex-direction: column;
+      }
+
+      .ad-btn {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
-  <div id="app">Loading help centre...</div>
+  <!-- Fixed Alongside Digital Top Navbar -->
+  <header class="ad-topbar">
+    <div class="ad-topbar-left">
+      <button type="button" class="ad-mobile-menu-btn" id="adMobileToggle" aria-label="Toggle Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+      <a href="#/" class="ad-logo-link" aria-label="Alongside Digital Help Centre Home">
+        <img src="public/logo.webp" onerror="this.src='docs/media/logo.webp'" alt="Alongside Digital">
+      </a>
+    </div>
+
+    <!-- Centred Instant Search -->
+    <div class="ad-search-center">
+      <div class="ad-search-box" id="adSearchBox">
+        <span class="ad-search-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </span>
+        <input
+          type="search"
+          id="adSearchInput"
+          class="ad-search-input"
+          placeholder="Search Presenter & Admin Centre guides..."
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <span class="ad-search-kbd">Ctrl K</span>
+        <div class="ad-search-results" id="adSearchResults"></div>
+      </div>
+    </div>
+
+    <div style="width: 40px;" aria-hidden="true"></div>
+  </header>
+
+  <div id="app">Loading Alongside Digital Help Centre...</div>
+
   <script>
+    // Dynamically resolve basePath so Docsify works on localhost, help.alongsidedigital.co.uk, and GitHub Pages (/help/)
+    const rootDir = window.location.pathname.replace(/\/index\.html$/, '').replace(/\/+$/, '');
+    const docsBasePath = (rootDir ? rootDir : '') + '/docs/';
+
     window.$docsify = {
-      name: 'Alongside Digital Help',
+      name: 'Alongside Digital Help Centre',
       repo: '',
       loadSidebar: true,
       subMaxLevel: 2,
-      basePath: '/help/docs/'
-    }
+      auto2top: true,
+      basePath: docsBasePath,
+      homepage: 'README.md',
+      pagination: {
+        previousText: 'Previous Guide',
+        nextText: 'Next Guide',
+        crossChapter: true,
+        crossChapterText: true
+      },
+      plugins: [
+        function alongsideDocsifyPlugin(hook, vm) {
+          hook.beforeEach(function (rawMarkdown) {
+            let content = rawMarkdown || '';
+            let meta = {};
+
+            // 1. Parse and strip YAML Frontmatter (from Pages CMS / Markdown files)
+            const fmMatch = content.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?/);
+            if (fmMatch) {
+              content = content.slice(fmMatch[0].length);
+              fmMatch[1].split(/\r?\n/).forEach(function (line) {
+                const idx = line.indexOf(':');
+                if (idx > -1) {
+                  const key = line.slice(0, idx).trim().toLowerCase();
+                  const val = line.slice(idx + 1).trim().replace(/^['"]|['"]$/g, '');
+                  meta[key] = val;
+                }
+              });
+            }
+
+            // 2. Update Browser Title
+            if (meta.title) {
+              document.title = meta.title + ' | Alongside Digital Help Centre';
+            } else {
+              document.title = 'Alongside Digital Help Centre';
+            }
+
+            // 3. Inject Article Title & Description Header (except on Home README which renders .ad-hero)
+            const isHome = !vm.route.path || vm.route.path === '/' || vm.route.path === '/README';
+            const hasH1 = /^\s*#\s+/.test(content) || content.indexOf('class="ad-hero"') !== -1;
+            if (!isHome && meta.title && !hasH1) {
+              let headerBlock = '# ' + meta.title + '\n\n';
+              if (meta.description) {
+                headerBlock += '<p class="ad-page-lead">' + meta.description + '</p>\n\n';
+              }
+              content = headerBlock + content;
+            }
+
+            // 4. Convert :::tip[Title] ... ::: / :::note / :::caution / :::danger callouts into Branded Callout HTML
+            content = content.replace(
+              /:::(tip|note|caution|danger)(?:\[([^\]]*)\])?\r?\n([\s\S]*?)\r?\n:::/g,
+              function (_, type, customTitle, body) {
+                const defaultTitles = {
+                  tip: 'Tip',
+                  note: 'Note',
+                  caution: 'Important',
+                  danger: 'Warning'
+                };
+                const title = customTitle || defaultTitles[type] || 'Note';
+                return (
+                  '\n<div class="ad-callout ad-callout--' + type + '">\n' +
+                  '  <div class="ad-callout-title">' + title + '</div>\n' +
+                  '  <div class="ad-callout-body">\n\n' + body.trim() + '\n\n  </div>\n' +
+                  '</div>\n'
+                );
+              }
+            );
+
+            // 5. Normalize internal links so trailing slashes never 404 in Docsify
+            content = content.replace(/\]\(\/(presenter|admin-centre)\/([a-z0-9-]+)\/\)/gi, '](/$1/$2)');
+            content = content.replace(/\]\(\/support\/\)/gi, '](/support)');
+
+            return content;
+          });
+
+          hook.doneEach(function () {
+            document.body.classList.remove('ad-sidebar-open');
+          });
+        }
+      ]
+    };
+
+    // Mobile drawer toggle
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggleBtn = document.getElementById('adMobileToggle');
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', function () {
+          document.body.classList.toggle('ad-sidebar-open');
+        });
+      }
+
+      // Build Instant Client-Side Search Index from _sidebar.md
+      const searchInput = document.getElementById('adSearchInput');
+      const searchResults = document.getElementById('adSearchResults');
+      const searchBox = document.getElementById('adSearchBox');
+      const pagesIndex = [];
+
+      async function buildSearchIndex() {
+        try {
+          const sbRes = await fetch(docsBasePath + '_sidebar.md');
+          if (!sbRes.ok) return;
+          const sbText = await sbRes.text();
+          const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+          const routes = [];
+          let m;
+          while ((m = linkRegex.exec(sbText)) !== null) {
+            const label = m[1].trim();
+            const route = m[2].trim();
+            if (!routes.some(function (r) { return r.route === route; })) {
+              routes.push({ label: label, route: route });
+            }
+          }
+
+          await Promise.all(
+            routes.map(async function (item) {
+              const cleanRoute = item.route === '/' ? 'README.md' : item.route.replace(/^\//, '').replace(/\.md$/, '') + '.md';
+              try {
+                const res = await fetch(docsBasePath + cleanRoute);
+                if (!res.ok) return;
+                const raw = await res.text();
+                let title = item.label;
+                const fm = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+                if (fm) {
+                  const tm = fm[1].match(/title:\s*(.+)/i);
+                  if (tm) title = tm[1].trim().replace(/^['"]|['"]$/g, '');
+                }
+                const plain = raw
+                  .replace(/^---\r?\n[\s\S]*?\r?\n---/, '')
+                  .replace(/<[^>]+>/g, ' ')
+                  .replace(/:::(tip|note|caution|danger)(\[[^\]]*\])?/g, ' ')
+                  .replace(/:::/g, ' ')
+                  .replace(/[#*`>|_-]/g, ' ')
+                  .replace(/\s+/g, ' ')
+                  .trim();
+
+                const category = item.route.indexOf('/presenter') === 0
+                  ? 'Presenter'
+                  : item.route.indexOf('/admin-centre') === 0
+                  ? 'Admin Centre'
+                  : 'Help Centre';
+
+                pagesIndex.push({
+                  title: title,
+                  route: '#' + (item.route.startsWith('/') ? item.route : '/' + item.route),
+                  category: category,
+                  text: plain
+                });
+              } catch (e) {
+                // ignore individual fetch errors
+              }
+            })
+          );
+        } catch (err) {
+          console.warn('Search index build skipped:', err);
+        }
+      }
+
+      buildSearchIndex();
+
+      function escapeHtml(str) {
+        return str.replace(/[&<>"']/g, function (c) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+        });
+      }
+
+      function renderResults(query) {
+        const q = query.trim().toLowerCase();
+        if (!q) {
+          searchResults.classList.remove('open');
+          searchResults.innerHTML = '';
+          return;
+        }
+
+        const terms = q.split(/\s+/).filter(Boolean);
+        const matches = pagesIndex
+          .map(function (page) {
+            const titleLow = page.title.toLowerCase();
+            const textLow = page.text.toLowerCase();
+            let score = 0;
+            terms.forEach(function (t) {
+              if (titleLow.includes(t)) score += 10;
+              if (textLow.includes(t)) score += 3;
+            });
+            return { page: page, score: score };
+          })
+          .filter(function (item) { return item.score > 0; })
+          .sort(function (a, b) { return b.score - a.score; })
+          .slice(0, 8);
+
+        if (matches.length === 0) {
+          searchResults.innerHTML = '<div class="ad-search-empty">No matching guides found. Need help? Email <strong>help@alongsidedigital.co.uk</strong></div>';
+          searchResults.classList.add('open');
+          return;
+        }
+
+        const firstTerm = terms[0];
+        const html = matches
+          .map(function (m) {
+            const p = m.page;
+            const idx = p.text.toLowerCase().indexOf(firstTerm);
+            let start = idx > 45 ? idx - 45 : 0;
+            let snippet = p.text.slice(start, start + 145);
+            if (start > 0) snippet = '...' + snippet;
+            if (start + 145 < p.text.length) snippet = snippet + '...';
+
+            let safeSnippet = escapeHtml(snippet);
+            terms.forEach(function (t) {
+              if (t.length > 1) {
+                const re = new RegExp('(' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+                safeSnippet = safeSnippet.replace(re, '<mark>$1</mark>');
+              }
+            });
+
+            return (
+              '<a class="ad-search-item" href="' + p.route + '">' +
+              '  <div class="ad-search-item-top">' +
+              '    <span class="ad-search-item-title">' + escapeHtml(p.title) + '</span>' +
+              '    <span class="ad-search-item-badge">' + escapeHtml(p.category) + '</span>' +
+              '  </div>' +
+              '  <p class="ad-search-item-snippet">' + safeSnippet + '</p>' +
+              '</a>'
+            );
+          })
+          .join('');
+
+        searchResults.innerHTML = html;
+        searchResults.classList.add('open');
+      }
+
+      searchInput.addEventListener('input', function (e) {
+        renderResults(e.target.value);
+      });
+
+      searchInput.addEventListener('focus', function (e) {
+        if (e.target.value.trim()) renderResults(e.target.value);
+      });
+
+      searchResults.addEventListener('click', function (e) {
+        if (e.target.closest('.ad-search-item')) {
+          searchResults.classList.remove('open');
+        }
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!searchBox.contains(e.target)) {
+          searchResults.classList.remove('open');
+        }
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+          e.preventDefault();
+          searchInput.focus();
+          searchInput.select();
+        } else if (e.key === 'Escape') {
+          searchResults.classList.remove('open');
+          searchInput.blur();
+        }
+      });
+    });
   </script>
-  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+
+  <!-- Docsify Core & Official Plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2/dist/docsify-copy-code.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
 </body>
 </html>

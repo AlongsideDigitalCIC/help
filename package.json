@@ -1,0 +1,10 @@
+{
+  "name": "alongside-digital-help-centre",
+  "version": "1.0.0",
+  "description": "Alongside Digital Help Centre powered by Docsify and Pages CMS",
+  "private": true,
+  "scripts": {
+    "dev": "npx docsify-cli serve . --port 4321",
+    "start": "npx docsify-cli serve . --port 4321"
+  }
+}

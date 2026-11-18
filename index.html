@@ -413,7 +413,7 @@
       line-height: 1.68 !important;
     }
 
-    .markdown-section a {
+    .markdown-section a:not(.ad-btn) {
       color: var(--secondary) !important;
       font-weight: 600;
       text-decoration: underline;
@@ -421,7 +421,7 @@
       text-underline-offset: 3px;
     }
 
-    .markdown-section a:hover {
+    .markdown-section a:not(.ad-btn):hover {
       color: var(--primary) !important;
     }
 
@@ -530,31 +530,40 @@
       cursor: pointer;
     }
 
-    .ad-btn-primary {
+    .markdown-section a.ad-btn-primary,
+    a.ad-btn-primary {
       background-color: var(--primary) !important;
       color: #FFFFFF !important;
-      border: 2px solid transparent;
+      border: 2px solid transparent !important;
       box-shadow: 0 8px 20px rgba(122, 80, 42, 0.24);
+      text-decoration: none !important;
     }
 
-    .ad-btn-primary:hover {
+    .markdown-section a.ad-btn-primary:hover,
+    a.ad-btn-primary:hover {
       background-color: var(--primary-hover) !important;
       color: #FFFFFF !important;
       transform: translateY(-2px);
       box-shadow: 0 12px 24px rgba(122, 80, 42, 0.32);
+      text-decoration: none !important;
     }
 
-    .ad-btn-secondary {
-      background-color: transparent !important;
+    .markdown-section a.ad-btn-secondary,
+    a.ad-btn-secondary {
+      background-color: #FFFFFF !important;
       color: var(--foreground) !important;
-      border: 2px solid rgba(28, 53, 94, 0.2);
+      border: 2px solid var(--border) !important;
+      box-shadow: 0 4px 12px rgba(28, 53, 94, 0.04);
+      text-decoration: none !important;
     }
 
-    .ad-btn-secondary:hover {
-      border-color: var(--foreground);
-      background-color: rgba(28, 53, 94, 0.05) !important;
+    .markdown-section a.ad-btn-secondary:hover,
+    a.ad-btn-secondary:hover {
+      border-color: var(--foreground) !important;
+      background-color: var(--bg-alt) !important;
       color: var(--foreground) !important;
       transform: translateY(-2px);
+      text-decoration: none !important;
     }
 
     /* Product Cards Grid - Equal Height & Side-by-Side */

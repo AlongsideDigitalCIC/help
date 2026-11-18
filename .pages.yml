@@ -3,6 +3,7 @@ content:
   - name: pages
     label: Help Pages
     type: collection
+    path: docs
     fields:
       - name: title
         type: string

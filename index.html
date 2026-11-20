@@ -1186,11 +1186,9 @@
             });
           }
 
-          // Auto-expand only the active sub-group (or Installation when on /presenter/ home)
+          // Auto-expand only the sub-group containing the active page; keep all 7 sub-groups collapsed on Presenter overview
           const subHasActive = groupMatchesRoute(subLi);
-          const isPresenterHome = /^\/presenter\/?(README)?$/i.test(routePath || '');
-          const isInstallGroup = /installation/i.test(subHeading.textContent || '');
-          if (subHasActive || (isPresenterHome && isInstallGroup)) {
+          if (subHasActive) {
             subLi.classList.remove('ad-collapsed');
           } else {
             subLi.classList.add('ad-collapsed');

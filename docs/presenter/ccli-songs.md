@@ -1,17 +1,9 @@
 ---
-title: Song Library & CCLI SongSelect
-description: Step-by-step guide with screenshots for adding songs from CCLI SongSelect into Presenter, managing your worship library, and exporting CCLI reports.
+title: Songs
+description: Adding songs from CCLI SongSelect, adding songs manually, importing existing song libraries, editing, and arranging flow in Presenter.
 ---
 
-Presenter allows you to manage a fast, searchable local database of worship songs, hymns, and contemporary anthems — complete with full-text lyric search, section arrangements, on-screen CCLI attribution, and automated CCLI reporting.
-
-:::tip[Moving from ProPresenter, FreeShow, OpenLP, Quelea, or WorshipTools?]
-You can bring your entire existing song database into Presenter in minutes using the **Universal Song Library Importer**. See **[Importing Your Song Library](/presenter/importing-songs)** for supported software and step-by-step instructions.
-:::
-
----
-
-## 1. Adding a Song from CCLI SongSelect to Your Library
+# Adding a Song from CCLI SongSelect to Your Library
 
 Follow these 6 steps to copy official lyrics and metadata from the **CCLI SongSelect** website directly into Presenter.
 
@@ -59,7 +51,7 @@ Your newly added song will now appear in the left-hand **Songs Library** panel, 
 
 ---
 
-## 2. Adding a Song Manually
+## Adding a Song Manually
 
 If a hymn, original church composition, or chorus isn't on SongSelect, you can add it manually in seconds:
 
@@ -71,32 +63,30 @@ If a hymn, original church composition, or chorus isn't on SongSelect, you can a
 
 ---
 
-## 3. Editing Songs & Quick Fix
+## Importing Songs & Existing Song Databases
+
+You can also bring in songs from files or migrate your entire song database from another presentation app:
+
+* **Single File Import:** Inside the **Create New Song** screen, click **+ Import File** at the top right to load a downloaded `.txt`, `.usr`, or OpenLyrics `.xml` song file.
+* **Bulk Import Downloaded SongSelect Files (`.txt` / `.usr`):** Open the **Songs** tab and click **Import** next to **+ New** (or drag and drop the files anywhere onto Presenter). Presenter automatically extracts titles, authors, copyright lines, CCLI numbers, and sections for every file.
+* **Migrating from ProPresenter, FreeShow, OpenLP, Quelea, WorshipTools, EasyWorship, or OpenSong:** Use Presenter's **Universal Song Library Importer**—see **[Migrating a Song Database](/presenter/importing-songs)** for supported formats and step-by-step instructions for every platform.
+
+---
+
+## Editing Songs & Quick Fix
 
 * **Full Song Edit:** Select any song in your **Songs Library** and click **Edit Song** in the preview toolbar to update its title, artist, copyright line, CCLI number, or full lyrics.
 * **Slide Quick Fix:** Spotted a typo right before the service? Click **Quick Fix** directly beneath any individual slide tile in the preview pane to correct it on the spot without opening the full editor.
 
 ---
 
-## 4. Flow Arrangement & Lines Per Slide
+## Flow Arrangement & Lines Per Slide
 
 * **Lines Per Slide (`1`, `2`, `3`, `4`):** Use the **Lines** selector at the top of any song preview to switch dynamically between 1, 2, 3, or 4 lines per slide—without ever rewriting or re-splitting your lyrics.
 * **Flow Arrangement:** Click **Flow Arrangement** to build custom verse/chorus orders (for example `Verse 1 → Chorus → Verse 2 → Chorus → Bridge → Chorus → Outro`) without duplicating lyric text in your file.
 
 ---
 
-## 5. Bulk Importing Downloaded SongSelect Files (`.txt` or `.usr`)
-
-If you have downloaded multiple **Lyrics (`.txt`)** or **USR (`.usr`)** files from CCLI SongSelect:
-
-1. In Presenter, open the **Songs** tab and click **Import** next to **+ New** (or drag and drop the downloaded `.txt` / `.usr` files anywhere onto the Presenter window).
-2. Presenter automatically extracts the song title, authors/writers, copyright notice, CCLI song number, and `[Verse]` / `[Chorus]` sections for every file.
-3. Click **Import Songs** to save them all to your library at once.
-
-For migrating full song databases from ProPresenter, FreeShow, OpenLP, Quelea, WorshipTools, EasyWorship, or OpenSong, see **[Migrating a Song Database](/presenter/importing-songs)**.
-
----
-
-## 6. CCLI Copyright Display & Annual Reporting
+## CCLI Copyright Display & Annual Reporting
 
 To enter your church's **CCLI Licence Number**, choose where attribution credits appear on screen (**First Slide Only**, **Last Slide Only**, etc.), or export your annual **Song History CSV**, see **[CCLI Licensing & Annual Reporting](/presenter/settings-ccli)**.

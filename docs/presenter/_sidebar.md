@@ -12,7 +12,7 @@
   * [Quick Start: Your First 5-Minute Service](/presenter/quick-start)
 
 * **Adding Media to Your Library**
-  * [Songs (Manual, SongSelect, Editing & Flow)](/presenter/ccli-songs)
+  * [Songs](/presenter/ccli-songs)
   * [Migrating a Song Database](/presenter/importing-songs)
   * [Images & Slide Decks](/presenter/library-images)
   * [Bible (Online & Offline)](/presenter/scripture-bibles)

@@ -328,9 +328,7 @@
       position: fixed;
       inset: 0;
       top: calc(var(--header-height) + env(safe-area-inset-top, 0px));
-      background: rgba(28, 53, 94, 0.42);
-      backdrop-filter: blur(2px);
-      -webkit-backdrop-filter: blur(2px);
+      background: rgba(28, 53, 94, 0.38);
       z-index: 185;
       opacity: 0;
       pointer-events: none;
@@ -639,9 +637,11 @@
     /* ========================================================
        MOBILE-FIRST MAIN CONTENT AREA & TYPOGRAPHY
        ======================================================== */
-    /* Neutralise Docsify's mobile "body.close" slide-over so tapping a link never shifts the article */
+    /* Neutralise Docsify's mobile "body.close" slide-over so tapping a link never shifts the article.
+       z-index: auto removes Docsify's main stacking context so the sidebar drawer can sit ABOVE the backdrop. */
     main {
       width: 100% !important;
+      z-index: auto !important;
     }
 
     .content,

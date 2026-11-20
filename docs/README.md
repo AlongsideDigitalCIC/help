@@ -7,7 +7,7 @@ description: Practical, friendly guidance for church and community leaders, admi
   <h1>How can we help you today?</h1>
   <p class="ad-tagline">Practical, friendly guidance for church and community leaders, administrators, and volunteers.</p>
   <div class="ad-hero-actions">
-    <a href="#/presenter/quick-start" class="ad-btn ad-btn-primary">Presenter Guides &rarr;</a>
+    <a href="#/presenter/" class="ad-btn ad-btn-primary">Presenter Guides &rarr;</a>
     <a href="#/admin-centre/overview" class="ad-btn ad-btn-secondary">Admin Centre Guides &rarr;</a>
   </div>
 </div>
@@ -30,7 +30,7 @@ description: Practical, friendly guidance for church and community leaders, admi
       <li><a href="#/presenter/service-flow">Adding Songs to Your Service Flow</a></li>
       <li><a href="#/presenter/live-controls">Running a Live Service, Alerts &amp; Timers</a></li>
     </ul>
-    <a href="#/presenter/install-windows" class="ad-card-cta">Browse all Presenter articles &rarr;</a>
+    <a href="#/presenter/" class="ad-card-cta">Browse all Presenter articles &rarr;</a>
   </div>
 
   <div class="ad-card">

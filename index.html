@@ -901,10 +901,9 @@
         <img src="public/logo.webp" onerror="this.src='docs/media/logo.webp'" alt="Alongside Digital">
       </a>
 
-      <!-- Clean Top Product Switcher -->
+      <!-- Clean Top Product Switcher (Starts with Core Products) -->
       <nav class="ad-product-nav" id="adProductNav" aria-label="Product Documentation">
-        <a href="#/" class="ad-product-link" data-nav="home">Home</a>
-        <a href="#/presenter/install-windows" class="ad-product-link" data-nav="presenter">Presenter</a>
+        <a href="#/presenter/" class="ad-product-link" data-nav="presenter">Presenter</a>
         <a href="#/admin-centre/overview" class="ad-product-link" data-nav="admin-centre">Admin Centre</a>
         <a href="#/support" class="ad-product-link" data-nav="support">Support</a>
       </nav>
@@ -974,9 +973,9 @@
         mobileBar = document.createElement('div');
         mobileBar.className = 'ad-mobile-product-bar';
         mobileBar.innerHTML =
-          '<a href="#/" data-nav="home">Home</a>' +
-          '<a href="#/presenter/install-windows" data-nav="presenter">Presenter</a>' +
+          '<a href="#/presenter/" data-nav="presenter">Presenter</a>' +
           '<a href="#/admin-centre/overview" data-nav="admin-centre">Admin Centre</a>' +
+          '<a href="#/" data-nav="home">Home</a>' +
           '<a href="#/support" data-nav="support">Support</a>';
         sidebar.insertBefore(mobileBar, sidebar.firstChild);
       }
@@ -1012,8 +1011,13 @@
         }
       });
 
-      // Fallback: if all Presenter groups collapsed (e.g. edge route), open the first two
+      // Fallback: when on Presenter Home (/presenter/), also open Installation so next steps are visible
       if (activeProduct === 'presenter') {
+        const isPresenterHome = /^\/presenter\/?(README)?$/i.test(routePath || '');
+        if (isPresenterHome && topGroups.length > 1) {
+          topGroups[0].classList.remove('ad-collapsed');
+          topGroups[1].classList.remove('ad-collapsed');
+        }
         const anyOpen = Array.from(topGroups).some(function (li) { return !li.classList.contains('ad-collapsed'); });
         if (!anyOpen && topGroups.length > 0) {
           topGroups[0].classList.remove('ad-collapsed');
@@ -1156,7 +1160,11 @@
 
         await Promise.all(
           routes.map(async function (item) {
-            const cleanRoute = item.route === '/' ? 'README.md' : item.route.replace(/^\//, '').replace(/\.md$/, '') + '.md';
+            const cleanRoute = item.route === '/'
+              ? 'README.md'
+              : item.route.endsWith('/')
+              ? item.route.replace(/^\//, '') + 'README.md'
+              : item.route.replace(/^\//, '').replace(/\.md$/, '') + '.md';
             try {
               const res = await fetch(docsBasePath + cleanRoute);
               if (!res.ok) return;

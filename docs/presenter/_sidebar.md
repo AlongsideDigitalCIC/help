@@ -1,3 +1,6 @@
+* **Presenter**
+  * [Presenter Help Home](/presenter/)
+
 * **Installation**
   * [Windows](/presenter/install-windows)
   * [macOS](/presenter/install-macos)

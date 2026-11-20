@@ -18,28 +18,28 @@ Follow these 6 steps to copy official lyrics and metadata from the **CCLI SongSe
 ### Step 1: Copy SongSelect Lyrics
 To add a song from **SongSelect**, first find the song within the **[CCLI SongSelect website](https://songselect.ccli.com)**, navigate to the **Lyrics** tab, and click the **Copy** button under **Sheet Music Actions**.
 
-![Step 1: Copy SongSelect Lyrics](../media/songselect-step-1.jpg)
+![Step 1: Copy SongSelect Lyrics](../media/songselect-step-1.webp)
 
 ---
 
 ### Step 2: Select Songs in Presenter
 Next, within the **Presenter** application, click on **Songs** along the main Library navigation bar at the top of the screen.
 
-![Step 2: Select Songs](../media/songselect-step-2.jpg)
+![Step 2: Select Songs](../media/songselect-step-2.webp)
 
 ---
 
 ### Step 3: Click + New
 In the left-hand **Songs Library** navigation panel, click the **+ New** button to add a new song to your library.
 
-![Step 3: Click + New](../media/songselect-step-3.jpg)
+![Step 3: Click + New](../media/songselect-step-3.webp)
 
 ---
 
 ### Step 4: Click Import Song Select
 In the **Create New Song** screen, click the **Import Song Select** button at the top right.
 
-![Step 4: Click Import Song Select](../media/songselect-step-4.jpg)
+![Step 4: Click Import Song Select](../media/songselect-step-4.webp)
 
 ---
 
@@ -48,14 +48,14 @@ The **Song Title**, **Artist**, **CCLI Song #**, **Copyright / Publisher** infor
 
 To finish adding the song to your library, click **Save Song** at the bottom right.
 
-![Step 5: Save Song](../media/songselect-step-5.jpg)
+![Step 5: Save Song](../media/songselect-step-5.webp)
 
 ---
 
 ### Step 6: Song Added to Your Library
 Your newly added song will now appear in the left-hand **Songs Library** panel, ready for you to select and add to your services.
 
-![Step 6: Song Added to Your Library](../media/songselect-step-6.jpg)
+![Step 6: Song Added to Your Library](../media/songselect-step-6.webp)
 
 ---
 

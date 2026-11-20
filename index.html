@@ -446,6 +446,17 @@
       padding: 1.25rem !important;
     }
 
+    /* Step Screenshots & Guide Images */
+    .markdown-section img {
+      max-width: 100% !important;
+      height: auto !important;
+      border-radius: 12px !important;
+      border: 1px solid var(--border) !important;
+      box-shadow: 0 10px 28px rgba(28, 53, 94, 0.08) !important;
+      margin: 1rem 0 1.85rem !important;
+      display: block !important;
+    }
+
     /* Tables */
     .markdown-section table {
       display: table !important;
@@ -819,6 +830,17 @@
   <div id="app">Loading Alongside Digital Help Centre...</div>
 
   <script>
+    // Handle direct non-hash links (e.g. /presenter/ccli-songs or /presenter/importing-songs/ from Presenter app)
+    (function () {
+      const pathMatch = window.location.pathname.match(/^(.*?)(\/(?:presenter|admin-centre)(?:\/[a-z0-9-]+)?|\/support)\/?$/i);
+      if (pathMatch && !window.location.hash) {
+        const basePrefix = pathMatch[1] || '/';
+        const targetRoute = pathMatch[2].replace(/\/+$/, '');
+        window.location.replace(basePrefix.replace(/\/+$/, '') + '/#' + targetRoute);
+        return;
+      }
+    })();
+
     // Dynamically resolve basePath so Docsify works on localhost, help.alongsidedigital.co.uk, and GitHub Pages (/help/)
     const rootDir = window.location.pathname.replace(/\/index\.html$/, '').replace(/\/+$/, '');
     const docsBasePath = (rootDir ? rootDir : '') + '/docs/';
@@ -896,9 +918,12 @@
               }
             );
 
-            // 5. Normalize internal links so trailing slashes never 404 in Docsify
+            // 5. Normalize internal links & Pages CMS media paths so they never 404 in Docsify
             content = content.replace(/\]\(\/(presenter|admin-centre)\/([a-z0-9-]+)\/\)/gi, '](/$1/$2)');
             content = content.replace(/\]\(\/support\/\)/gi, '](/support)');
+            if (vm.route && vm.route.path && /^\/(presenter|admin-centre)\//i.test(vm.route.path)) {
+              content = content.replace(/!\[([^\]]*)\]\(\/?media\/([^)]+)\)/g, '![$1](../media/$2)');
+            }
 
             return content;
           });

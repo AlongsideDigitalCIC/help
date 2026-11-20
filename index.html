@@ -1105,11 +1105,36 @@
         const topSubList = topLi.querySelector(':scope > ul');
         if (!topHeading || !topSubList) return;
 
+        const headingText = (topHeading.textContent || '').trim().toLowerCase();
+        const isPresenterGroup = headingText.includes('presenter');
+        const isAdminGroup = headingText.includes('admin');
+
         if (!topHeading.dataset.collapsibleBound) {
           topHeading.dataset.collapsibleBound = 'true';
           topHeading.addEventListener('click', function () {
+            const wasCollapsed = topLi.classList.contains('ad-collapsed');
             topLi.classList.toggle('ad-collapsed');
+            // When opening a product from another section/home, navigate directly to its hub
+            if (wasCollapsed) {
+              if (isPresenterGroup && getActiveProduct(window.location.hash.replace(/^#/, '')) !== 'presenter') {
+                window.location.hash = '#/presenter/';
+              } else if (isAdminGroup && getActiveProduct(window.location.hash.replace(/^#/, '')) !== 'admin-centre') {
+                window.location.hash = '#/admin-centre/overview';
+              }
+            }
           });
+        }
+
+        // Normalize current route for reliable link matching (independent of Docsify timing)
+        const normalizedRoute = (routePath || '/').replace(/\/+$/, '').toLowerCase() || '/';
+        function groupMatchesRoute(containerEl) {
+          if (containerEl.querySelector('li.active')) return true;
+          const links = containerEl.querySelectorAll('a[href]');
+          for (let i = 0; i < links.length; i++) {
+            const href = (links[i].getAttribute('href') || '').replace(/^#/, '').replace(/\/+$/, '').toLowerCase() || '/';
+            if (href === normalizedRoute) return true;
+          }
+          return false;
         }
 
         // Handle Level 2 sub-groups inside this product (e.g. Installation, Getting Started, etc.)
@@ -1128,7 +1153,7 @@
           }
 
           // Auto-expand only the active sub-group (or Installation when on /presenter/ home)
-          const subHasActive = !!subLi.querySelector('li.active');
+          const subHasActive = groupMatchesRoute(subLi);
           const isPresenterHome = /^\/presenter\/?(README)?$/i.test(routePath || '');
           const isInstallGroup = /installation/i.test(subHeading.textContent || '');
           if (subHasActive || (isPresenterHome && isInstallGroup)) {
@@ -1138,11 +1163,11 @@
           }
         });
 
-        // Auto-expand active product group; keep others cleanly collapsed so sidebar stays compact
-        const topHasActive = !!topLi.querySelector('li.active');
-        if (activeProduct === 'home' || activeProduct === 'support') {
-          topLi.classList.add('ad-collapsed');
-        } else if (topHasActive) {
+        // Auto-expand active product group reliably by routePath; keep other product collapsed
+        const isCurrentProduct =
+          (isPresenterGroup && activeProduct === 'presenter') ||
+          (isAdminGroup && activeProduct === 'admin-centre');
+        if (isCurrentProduct) {
           topLi.classList.remove('ad-collapsed');
         } else {
           topLi.classList.add('ad-collapsed');
@@ -1166,9 +1191,12 @@
     window.$docsify = {
       name: 'Alongside Digital Help Centre',
       repo: '',
-      loadSidebar: '_sidebar.md',
+      loadSidebar: '_sidebar.md?v=3',
       alias: {
-        '/.*/_sidebar.md': '/_sidebar.md'
+        '/.*/_sidebar.md.*': '/_sidebar.md?v=3'
+      },
+      requestHeaders: {
+        'cache-control': 'no-cache'
       },
       subMaxLevel: 2,
       auto2top: true,

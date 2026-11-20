@@ -13,7 +13,7 @@
     * [Images & Slide Decks](/presenter/library-images)
     * [Bible](/presenter/scripture-bibles)
     * [Liturgy](/presenter/liturgy)
-    * [Videos (Local, YouTube & Vimeo)](/presenter/library-videos)
+    * [Videos](/presenter/library-videos)
     * [Background Music](/presenter/library-music)
   * **Building Your Service**
     * [Adding Songs to Your Service](/presenter/service-flow)

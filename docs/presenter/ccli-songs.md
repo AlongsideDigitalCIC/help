@@ -1,9 +1,9 @@
 ---
 title: Songs
-description: Adding songs from CCLI SongSelect, adding songs manually, importing existing song libraries, editing, and arranging flow in Presenter.
+description: How to add, import, edit, and arrange songs in Presenter.
 ---
 
-# Adding a Song from CCLI SongSelect to Your Library
+## Import from CCLI SongSelect
 
 Follow these 6 steps to copy official lyrics and metadata from the **CCLI SongSelect** website directly into Presenter.
 
@@ -84,9 +84,3 @@ You can also bring in songs from files or migrate your entire song database from
 
 * **Lines Per Slide (`1`, `2`, `3`, `4`):** Use the **Lines** selector at the top of any song preview to switch dynamically between 1, 2, 3, or 4 lines per slide—without ever rewriting or re-splitting your lyrics.
 * **Flow Arrangement:** Click **Flow Arrangement** to build custom verse/chorus orders (for example `Verse 1 → Chorus → Verse 2 → Chorus → Bridge → Chorus → Outro`) without duplicating lyric text in your file.
-
----
-
-## CCLI Copyright Display & Annual Reporting
-
-To enter your church's **CCLI Licence Number**, choose where attribution credits appear on screen (**First Slide Only**, **Last Slide Only**, etc.), or export your annual **Song History CSV**, see **[CCLI Licensing & Annual Reporting](/presenter/settings-ccli)**.

@@ -85,6 +85,11 @@
       display: block;
     }
 
+    /* Hide Docsify's built-in .app-nav so it never collides with our sticky header */
+    .app-nav {
+      display: none !important;
+    }
+
     /* Product Switcher Tabs in Top Header */
     .ad-product-nav {
       display: flex;
@@ -92,6 +97,8 @@
       gap: 0.35rem;
       padding-left: 1rem;
       border-left: 1px solid var(--border);
+      position: static;
+      margin: 0;
     }
 
     .ad-product-link {
@@ -1064,12 +1071,12 @@
         <img src="public/logo.webp" onerror="this.src='docs/media/logo.webp'" alt="Alongside Digital">
       </a>
 
-      <!-- Clean Top Product Switcher (Starts with Core Products) -->
-      <nav class="ad-product-nav" id="adProductNav" aria-label="Product Documentation">
+      <!-- Clean Top Product Switcher (Uses div + role="navigation" so Docsify never hijacks <nav> as .app-nav) -->
+      <div class="ad-product-nav" id="adProductNav" role="navigation" aria-label="Product Documentation">
         <a href="#/presenter/" class="ad-product-link" data-nav="presenter">Presenter</a>
         <a href="#/admin-centre/overview" class="ad-product-link" data-nav="admin-centre">Admin Centre</a>
         <a href="mailto:help@alongsidedigital.co.uk" class="ad-product-link" title="Email help@alongsidedigital.co.uk">Contact Support</a>
-      </nav>
+      </div>
     </div>
 
     <!-- Instant Search -->

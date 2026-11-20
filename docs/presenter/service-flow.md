@@ -12,30 +12,42 @@ Your **Service Flow** is the running order of songs, readings, liturgies, videos
 ### Step 1: Select Songs
 To add a song to your service list, first click on the **Songs** tab on the Library navigation bar along the top of the Presenter application.
 
+![Step 1: Select Songs](../media/service-flow-step-1.webp)
+
 ---
 
 ### Step 2: Search Your Library
 All of your songs appear in the left-hand **Songs Library** navigation panel. You can scroll through your list to find the song you want, or type into the **Search Library...** box to search by **song title**, **artist**, or **lyrics** to locate it quickly.
+
+![Step 2: Search Your Library](../media/service-flow-step-2.webp)
 
 ---
 
 ### Step 3: Select the Song
 Once you have found the song you want, click on the **song tile** in the left-hand navigation panel to open its preview.
 
+![Step 3: Select the Song](../media/service-flow-step-3.webp)
+
 ---
 
 ### Step 4: Preview & Click Add to Service
-Review the song slides in the preview pane to make sure it is the right version, then click **Add to Service** to add the song to your service order.
+Review the song slides in the preview pane to make sure it is the right version, then click **+ Add to Service** to add the song to your service order.
+
+![Step 4: Preview and Click Add to Service](../media/service-flow-step-4.webp)
 
 ---
 
 ### Step 5: Confirmation
 Once added, the song tile in the left-hand navigation panel will display a **tick inside a circle** icon next to the song name, confirming it is in your current service.
 
+![Step 5: Confirmation Icon](../media/service-flow-step-5.webp)
+
 ---
 
 ### Step 6: Check Your Service Flow
 Switch back to the **Service** tab on the top navigation bar. You will see your newly added song listed in your **Service Flow**, ready to display when you go live.
+
+![Step 6: Song Added to Service Flow](../media/service-flow-step-6.webp)
 
 ---
 

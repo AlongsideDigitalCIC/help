@@ -11,8 +11,8 @@
     * [Songs](/presenter/ccli-songs)
     * [Migrating a Song Database](/presenter/importing-songs)
     * [Images & Slide Decks](/presenter/library-images)
-    * [Bible (Online & Offline)](/presenter/scripture-bibles)
-    * [Liturgy (Creating & Editing)](/presenter/liturgy)
+    * [Bible](/presenter/scripture-bibles)
+    * [Liturgy](/presenter/liturgy)
     * [Videos (Local, YouTube & Vimeo)](/presenter/library-videos)
     * [Background Music](/presenter/library-music)
   * **Building Your Service**

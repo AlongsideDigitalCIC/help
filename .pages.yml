@@ -8,8 +8,6 @@ content:
     type: collection
     path: docs/presenter
     filename: "{primary}.md"
-    exclude:
-      - _sidebar.md
     view:
       fields: [title, description]
       primary: title
@@ -30,8 +28,6 @@ content:
     type: collection
     path: docs/admin-centre
     filename: "{primary}.md"
-    exclude:
-      - _sidebar.md
     view:
       fields: [title, description]
       primary: title
@@ -77,35 +73,13 @@ content:
         label: Content
         type: rich-text
 
-  - name: presenter-sidebar
-    label: Presenter Sidebar Menu
-    type: file
-    path: docs/presenter/_sidebar.md
-    fields:
-      - name: body
-        label: Presenter Sidebar Links (Markdown)
-        type: code
-        options:
-          language: markdown
-
-  - name: admin-centre-sidebar
-    label: Admin Centre Sidebar Menu
-    type: file
-    path: docs/admin-centre/_sidebar.md
-    fields:
-      - name: body
-        label: Admin Centre Sidebar Links (Markdown)
-        type: code
-        options:
-          language: markdown
-
-  - name: home-sidebar
-    label: Main Home Sidebar Menu
+  - name: sidebar
+    label: Sidebar Navigation
     type: file
     path: docs/_sidebar.md
     fields:
       - name: body
-        label: Home Sidebar Links (Markdown)
+        label: Sidebar Links (Markdown)
         type: code
         options:
           language: markdown

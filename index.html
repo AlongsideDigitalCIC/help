@@ -307,9 +307,9 @@
       list-style: none !important;
     }
 
-    /* Collapsible Category Sections */
+    /* Collapsible Top-Level Product Groups (Presenter, Admin Centre, Help & Support) */
     .sidebar-nav > ul > li {
-      margin-bottom: 0.65rem !important;
+      margin-bottom: 0.75rem !important;
     }
 
     .sidebar-nav > ul > li > p,
@@ -317,39 +317,88 @@
       display: flex !important;
       align-items: center !important;
       justify-content: space-between !important;
+      color: var(--foreground) !important;
+      font-size: 0.85rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.04em !important;
+      text-transform: uppercase !important;
+      padding: 0.55rem 0.85rem !important;
+      margin: 0.2rem 0 0.25rem !important;
+      border-radius: 10px;
+      background: rgba(240, 235, 225, 0.7);
+      border: 1px solid var(--border);
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .sidebar-nav > ul > li > p:hover,
+    .sidebar-nav > ul > li > strong:hover {
+      background: var(--bg-alt);
+      color: var(--primary) !important;
+      border-color: rgba(122, 80, 42, 0.3);
+    }
+
+    .sidebar-nav > ul > li > p::after,
+    .sidebar-nav > ul > li > strong::after {
+      content: '▾';
+      font-size: 0.9rem;
+      color: var(--primary);
+      transition: transform 0.2s ease;
+    }
+
+    /* Level 2 Collapsible Sub-Groups (Installation, Getting Started, etc.) */
+    .sidebar-nav li.ad-sub-group {
+      margin: 0.35rem 0 0.25rem 0.25rem !important;
+    }
+
+    .sidebar-nav li.ad-sub-group > p,
+    .sidebar-nav li.ad-sub-group > strong {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
       color: #8C7360 !important;
-      font-size: 0.72rem !important;
+      font-size: 0.71rem !important;
       font-weight: 700 !important;
       letter-spacing: 0.08em !important;
       text-transform: uppercase !important;
-      padding: 0.45rem 0.75rem !important;
-      margin: 0.25rem 0 0.2rem !important;
+      padding: 0.4rem 0.7rem !important;
+      margin: 0.15rem 0 !important;
       border-radius: 8px;
       cursor: pointer;
       user-select: none;
       transition: background 0.15s ease, color 0.15s ease;
     }
 
-    .sidebar-nav > ul > li > p:hover,
-    .sidebar-nav > ul > li > strong:hover {
+    .sidebar-nav li.ad-sub-group > p:hover,
+    .sidebar-nav li.ad-sub-group > strong:hover {
       background: rgba(122, 80, 42, 0.06);
       color: var(--primary) !important;
     }
 
-    .sidebar-nav > ul > li > p::after,
-    .sidebar-nav > ul > li > strong::after {
+    .sidebar-nav li.ad-sub-group > p::after,
+    .sidebar-nav li.ad-sub-group > strong::after {
       content: '▾';
-      font-size: 0.85rem;
-      opacity: 0.7;
+      font-size: 0.8rem;
+      opacity: 0.75;
       transition: transform 0.2s ease;
     }
 
-    .sidebar-nav > ul > li.ad-collapsed > p::after,
-    .sidebar-nav > ul > li.ad-collapsed > strong::after {
+    .sidebar-nav li.ad-sub-group > ul {
+      padding-left: 0.55rem !important;
+      border-left: 1px solid var(--border);
+      margin-left: 0.65rem !important;
+      margin-top: 0.15rem !important;
+      margin-bottom: 0.35rem !important;
+    }
+
+    /* Collapsed State (works for both Level 1 and Level 2) */
+    .sidebar-nav li.ad-collapsed > p::after,
+    .sidebar-nav li.ad-collapsed > strong::after {
       transform: rotate(-90deg);
     }
 
-    .sidebar-nav > ul > li.ad-collapsed > ul {
+    .sidebar-nav li.ad-collapsed > ul {
       display: none !important;
     }
 
@@ -361,7 +410,7 @@
       font-weight: 500 !important;
       line-height: 1.4 !important;
       border-radius: 8px !important;
-      padding: 0.48rem 0.85rem !important;
+      padding: 0.46rem 0.8rem !important;
       margin: 0.12rem 0 !important;
       border-right: none !important;
       text-decoration: none !important;
@@ -377,9 +426,8 @@
       text-decoration: none !important;
     }
 
-    /* Active Page Pill - Solid Collaboration Copper (#7A502A) */
-    .sidebar-nav > ul > li > ul > li.active > a,
-    .sidebar-nav > ul > li.active > a {
+    /* Active Page Pill - Solid Collaboration Copper (#7A502A) at any nesting level */
+    .sidebar-nav li.active:not(.ad-toc-item) > a {
       background-color: var(--primary) !important;
       color: #FFFFFF !important;
       font-weight: 600 !important;
@@ -391,14 +439,19 @@
     .sidebar-nav ul.app-sub-sidebar {
       margin-top: 0.2rem !important;
       margin-bottom: 0.45rem !important;
-      padding-left: 0.8rem !important;
+      padding-left: 0.75rem !important;
       border-left: 2px solid var(--border) !important;
-      margin-left: 0.85rem !important;
+      margin-left: 0.75rem !important;
+    }
+
+    .sidebar-nav ul.app-sub-sidebar li::before {
+      display: none !important;
+      content: none !important;
     }
 
     .sidebar-nav ul.app-sub-sidebar li a {
-      font-size: 0.82rem !important;
-      padding: 0.32rem 0.65rem !important;
+      font-size: 0.81rem !important;
+      padding: 0.3rem 0.6rem !important;
       color: var(--text-muted) !important;
       background: transparent !important;
       box-shadow: none !important;
@@ -414,6 +467,7 @@
       color: var(--primary) !important;
       font-weight: 600 !important;
       background: rgba(122, 80, 42, 0.06) !important;
+      box-shadow: none !important;
     }
 
     /* ========================================================
@@ -478,7 +532,16 @@
       line-height: 1.68 !important;
     }
 
-    .markdown-section a:not(.ad-btn) {
+    .markdown-section a.anchor {
+      color: var(--foreground) !important;
+      text-decoration: none !important;
+    }
+
+    .markdown-section a.anchor span {
+      color: var(--foreground) !important;
+    }
+
+    .markdown-section a:not(.ad-btn):not(.anchor) {
       color: var(--secondary) !important;
       font-weight: 600;
       text-decoration: underline;
@@ -486,7 +549,7 @@
       text-underline-offset: 3px;
     }
 
-    .markdown-section a:not(.ad-btn):hover {
+    .markdown-section a:not(.ad-btn):not(.anchor):hover {
       color: var(--primary) !important;
     }
 
@@ -981,55 +1044,78 @@
       }
       updateProductNavHighlight(routePath);
 
-      // 2. Make top-level sidebar categories collapsible
+      // 2. Mark TOC items so they don't get main Copper pill styling
+      sidebarNav.querySelectorAll('ul.app-sub-sidebar li').forEach(function (tocLi) {
+        tocLi.classList.add('ad-toc-item');
+      });
+
+      // 3. Make both Level 1 (Products) and Level 2 (Presenter Sections) collapsible
       const activeProduct = getActiveProduct(routePath);
       const topGroups = sidebarNav.querySelectorAll(':scope > ul > li');
-      topGroups.forEach(function (li) {
-        const heading = li.querySelector(':scope > p, :scope > strong');
-        const subList = li.querySelector(':scope > ul');
-        if (!heading || !subList) return;
 
-        // Avoid double-binding click handlers
-        if (!heading.dataset.collapsibleBound) {
-          heading.dataset.collapsibleBound = 'true';
-          heading.addEventListener('click', function () {
-            li.classList.toggle('ad-collapsed');
+      topGroups.forEach(function (topLi, topIdx) {
+        const topHeading = topLi.querySelector(':scope > p, :scope > strong');
+        const topSubList = topLi.querySelector(':scope > ul');
+        if (!topHeading || !topSubList) return;
+
+        if (!topHeading.dataset.collapsibleBound) {
+          topHeading.dataset.collapsibleBound = 'true';
+          topHeading.addEventListener('click', function () {
+            topLi.classList.toggle('ad-collapsed');
           });
         }
 
-        // For Presenter's multi-section sidebar, auto-expand the active section and collapse inactive ones on route change
-        if (activeProduct === 'presenter') {
-          const hasActiveChild = !!li.querySelector('li.active');
-          if (hasActiveChild) {
-            li.classList.remove('ad-collapsed');
-          } else if (!li.dataset.userToggled) {
-            // Keep Installation & Getting Started open if nothing matched, otherwise keep only active group open
-            li.classList.add('ad-collapsed');
+        // Handle Level 2 sub-groups inside this product (e.g. Installation, Getting Started, etc.)
+        const subGroups = topSubList.querySelectorAll(':scope > li');
+        subGroups.forEach(function (subLi) {
+          const subHeading = subLi.querySelector(':scope > p, :scope > strong');
+          const nestedUl = subLi.querySelector(':scope > ul');
+          if (!subHeading || !nestedUl || nestedUl.classList.contains('app-sub-sidebar')) return;
+
+          subLi.classList.add('ad-sub-group');
+          if (!subHeading.dataset.collapsibleBound) {
+            subHeading.dataset.collapsibleBound = 'true';
+            subHeading.addEventListener('click', function () {
+              subLi.classList.toggle('ad-collapsed');
+            });
           }
+
+          // Auto-expand only the active sub-group (or Installation when on /presenter/ home)
+          const subHasActive = !!subLi.querySelector('li.active');
+          const isPresenterHome = /^\/presenter\/?(README)?$/i.test(routePath || '');
+          const isInstallGroup = /installation/i.test(subHeading.textContent || '');
+          if (subHasActive || (isPresenterHome && isInstallGroup)) {
+            subLi.classList.remove('ad-collapsed');
+          } else {
+            subLi.classList.add('ad-collapsed');
+          }
+        });
+
+        // Auto-expand active product group; keep others cleanly collapsed so sidebar stays compact
+        const topHasActive = !!topLi.querySelector('li.active');
+        const headingText = (topHeading.textContent || '').toLowerCase();
+        if (activeProduct === 'home' || activeProduct === 'support') {
+          // On Home/Support, keep Presenter & Admin Centre headers visible (collapsed) and Help & Support open
+          if (headingText.includes('help') || topHasActive) {
+            topLi.classList.remove('ad-collapsed');
+          } else {
+            topLi.classList.add('ad-collapsed');
+          }
+        } else if (topHasActive) {
+          topLi.classList.remove('ad-collapsed');
         } else {
-          li.classList.remove('ad-collapsed');
+          topLi.classList.add('ad-collapsed');
         }
       });
-
-      // Fallback: when on Presenter Home (/presenter/), also open Installation so next steps are visible
-      if (activeProduct === 'presenter') {
-        const isPresenterHome = /^\/presenter\/?(README)?$/i.test(routePath || '');
-        if (isPresenterHome && topGroups.length > 1) {
-          topGroups[0].classList.remove('ad-collapsed');
-          topGroups[1].classList.remove('ad-collapsed');
-        }
-        const anyOpen = Array.from(topGroups).some(function (li) { return !li.classList.contains('ad-collapsed'); });
-        if (!anyOpen && topGroups.length > 0) {
-          topGroups[0].classList.remove('ad-collapsed');
-          if (topGroups[1]) topGroups[1].classList.remove('ad-collapsed');
-        }
-      }
     }
 
     window.$docsify = {
       name: 'Alongside Digital Help Centre',
       repo: '',
-      loadSidebar: true,
+      loadSidebar: '_sidebar.md',
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'
+      },
       subMaxLevel: 2,
       auto2top: true,
       basePath: docsBasePath,
@@ -1134,7 +1220,7 @@
       const pagesIndex = [];
 
       async function buildSearchIndex() {
-        const sidebarFiles = ['_sidebar.md', 'presenter/_sidebar.md', 'admin-centre/_sidebar.md'];
+        const sidebarFiles = ['_sidebar.md'];
         const routes = [];
         const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
 

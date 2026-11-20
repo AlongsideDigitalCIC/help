@@ -4,9 +4,10 @@
 
 * **Presenter**
   * [Overview & Quick Start](/presenter/quick-start)
+  * [Adding Songs & Building Your Service Flow](/presenter/service-flow)
+  * [Song Library & CCLI SongSelect](/presenter/ccli-songs)
   * [Importing Your Song Library](/presenter/importing-songs)
   * [Display & Dual-Screen Setup](/presenter/presentation-mode)
-  * [Song Library & CCLI SongSelect](/presenter/ccli-songs)
   * [Scripture & Bible Versions](/presenter/scripture-bibles)
   * [Liturgy & Responsive Readings](/presenter/liturgy)
   * [Media Playback (Video, Audio & PDF)](/presenter/media)

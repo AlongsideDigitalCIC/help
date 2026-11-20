@@ -53,7 +53,7 @@ To finish adding the song to your library, click **Save Song** at the bottom rig
 ---
 
 ### Step 6: Song Added to Your Library
-Your newly added song will now appear in the left-hand **Songs Library** panel, ready for you to select and add to your services.
+Your newly added song will now appear in the left-hand **Songs Library** panel, ready for you to select and add to your services. See **[Adding Songs & Building Your Service Flow](/presenter/service-flow)** for the next step.
 
 ![Step 6: Song Added to Your Library](../media/songselect-step-6.webp)
 

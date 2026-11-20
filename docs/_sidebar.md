@@ -9,8 +9,8 @@
     * [Quick Start: First 5-Minute Service](/presenter/quick-start)
   * **Adding Media to Your Library**
     * [Songs](/presenter/ccli-songs)
-    * [Migrating a Song Database](/presenter/importing-songs)
-    * [Images & Slide Decks](/presenter/library-images)
+      * [Migrating a Song Database](/presenter/importing-songs)
+    * [Images](/presenter/library-images)
     * [Bible](/presenter/scripture-bibles)
     * [Liturgy](/presenter/liturgy)
     * [Videos](/presenter/library-videos)

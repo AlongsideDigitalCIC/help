@@ -435,6 +435,25 @@
       box-shadow: 0 4px 12px rgba(122, 80, 42, 0.2) !important;
     }
 
+    /* Nested child pages under a sidebar guide (e.g. Migrating a Song Database under Songs) */
+    .sidebar-nav li.ad-sub-group > ul > li > ul:not(.app-sub-sidebar) {
+      margin-top: 0.15rem !important;
+      margin-bottom: 0.35rem !important;
+      padding-left: 0.65rem !important;
+      border-left: 2px solid var(--border) !important;
+      margin-left: 0.75rem !important;
+    }
+
+    .sidebar-nav li.ad-sub-group > ul > li > ul:not(.app-sub-sidebar) > li > a {
+      font-size: 0.84rem !important;
+      padding: 0.36rem 0.7rem !important;
+      color: var(--text-muted) !important;
+    }
+
+    .sidebar-nav li.ad-sub-group > ul > li > ul:not(.app-sub-sidebar) > li.active:not(.ad-toc-item) > a {
+      color: #FFFFFF !important;
+    }
+
     /* Sub-headings table of contents inside sidebar */
     .sidebar-nav ul.app-sub-sidebar {
       margin-top: 0.2rem !important;
@@ -1222,9 +1241,9 @@
     window.$docsify = {
       name: 'Alongside Digital Help Centre',
       repo: '',
-      loadSidebar: '_sidebar.md?v=7',
+      loadSidebar: '_sidebar.md?v=8',
       alias: {
-        '/.*/_sidebar.md.*': '/_sidebar.md?v=7'
+        '/.*/_sidebar.md.*': '/_sidebar.md?v=8'
       },
       requestHeaders: {
         'cache-control': 'no-cache'

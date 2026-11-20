@@ -24,13 +24,13 @@ description: Practical, friendly guidance for church and community leaders, admi
     </div>
     <p class="ad-card-desc">100% free presentation software for worship services and live community gatherings.</p>
     <ul class="ad-card-links">
-      <li><a href="#/presenter/quick-start">Quick Start Guide</a></li>
-      <li><a href="#/presenter/service-flow">Adding Songs &amp; Service Flow</a></li>
-      <li><a href="#/presenter/ccli-songs">CCLI SongSelect &amp; Song Library</a></li>
-      <li><a href="#/presenter/importing-songs">Importing Your Song Library</a></li>
-      <li><a href="#/presenter/presentation-mode">Dual Screen &amp; Projector Setup</a></li>
+      <li><a href="#/presenter/install-windows">Installation &amp; Media Folder Setup</a></li>
+      <li><a href="#/presenter/application-overview">Application Overview &amp; Quick Start</a></li>
+      <li><a href="#/presenter/ccli-songs">Adding Songs (SongSelect &amp; Manual)</a></li>
+      <li><a href="#/presenter/service-flow">Adding Songs to Your Service Flow</a></li>
+      <li><a href="#/presenter/live-controls">Running a Live Service, Alerts &amp; Timers</a></li>
     </ul>
-    <a href="#/presenter/quick-start" class="ad-card-cta">Browse all Presenter articles &rarr;</a>
+    <a href="#/presenter/install-windows" class="ad-card-cta">Browse all Presenter articles &rarr;</a>
   </div>
 
   <div class="ad-card">

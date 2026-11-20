@@ -1,35 +1,43 @@
 ---
-title: Liturgy & Responsive Readings
-description: Build call-and-response prayers, creeds, and liturgies with speaker colour coding.
+title: Liturgy & Responsive Readings (Creating & Editing)
+description: Create and edit call-and-response prayers, creeds, and responsive readings in Presenter with colour-coded speaker roles and live slide previews.
 ---
 
-Traditional liturgical services and modern community prayers often involve distinct speaker parts: a leader, the congregation, or all in unison. Presenter includes a built-in liturgy builder designed specifically for this workflow.
-
----
-
-## 1. Creating a Liturgy Item
-
-1. In your library or Service Order, select **+ Add Item &rarr; Liturgy / Prayer**.
-2. Give your liturgy a title (e.g. *The Lord's Prayer*, *Opening Call to Worship*, *Confession*).
+Traditional liturgical services, creeds, and modern community prayers often involve distinct speaker parts. Presenter includes a dedicated **Liturgy Editor** that makes responsive readings effortless for congregations to follow.
 
 ---
 
-## 2. Speaker Roles & Formatting
+## 1. Creating a New Liturgy
 
-Use the following prefixes at the beginning of any line:
-
-* **`Leader:`** The person leading the service.
-* **`All:`** or **`Congregation:`** The response spoken by the entire room.
-* **`Reader:`** For designated scripture or reflection readers.
-
-Presenter automatically highlights the lines:
-* **Leader lines** are styled in regular weight.
-* **Congregation lines** are styled in **bold** and your chosen congregation accent colour, making it instantly obvious to worshippers when to join in.
+1. Click the **Liturgy** tab on the top navigation bar.
+2. Click the **+ New** button at the top right of the **Liturgy Library** panel.
+3. Give your liturgy a clear title (for example *Opening Call to Worship*, *The Lord's Prayer*, or *Nicene Creed*).
 
 ---
 
-## 3. Best Practices for Clear Projection
+## 2. Speaker Roles, Formatting & Alignment
 
-* Avoid putting more than 4â€“6 lines on a single slide.
-* Keep font sizes large enough (at least 36ptâ€“48pt depending on your room size).
-* Use high contrast backgrounds (e.g., crisp white text on deep navy `#1C355E` or dark charcoal).
+Use the toolbar buttons in the **Liturgy Editor** to style each section so the congregation instantly knows when to join in:
+
+* **Speaker:** Regular leader or minister lines.
+* **Response:** Congregation response lines, automatically highlighted in bold/accent styling so worshippers spot their part immediately.
+* **Individual:** Highlighted styling for a solo reader or baptism/confirmation candidate.
+* **Group:** Distinct styling for a choir, family, or designated speaking group.
+* **Text Alignment:** Switch any slide between **Left**, **Centre**, or **Right** alignment.
+* **Rich Formatting:** Apply **Bold**, **Italic**, **Underline**, or bulleted/numbered lists directly from the editor toolbar.
+
+As you edit, the **Live Slide Preview** updates in real time using your chosen Liturgy background and font.
+
+---
+
+## 3. Editing an Existing Liturgy
+
+1. Open the **Liturgy** tab and click any saved liturgy file in the left-hand sidebar.
+2. Click **Edit** in the preview toolbar to modify wording, speaker parts, or slide breaks.
+3. Click **Save**—your changes are saved straight back to `Presenter\Liturgy\` as a clean `.md` file.
+
+---
+
+## Next Step
+
+* [Adding Liturgy to Your Service](/presenter/service-liturgy)

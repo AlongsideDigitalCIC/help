@@ -44,7 +44,7 @@
     }
 
     /* ========================================================
-       STICKY TOP HEADER (LOGO LEFT, SEARCH CENTRED)
+       STICKY TOP HEADER (LOGO + PRODUCT NAV + SEARCH)
        ======================================================== */
     .ad-topbar {
       position: fixed;
@@ -60,13 +60,14 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 1.25rem;
       padding: 0 1.5rem;
     }
 
     .ad-topbar-left {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 1.5rem;
       z-index: 2;
       flex-shrink: 0;
     }
@@ -78,10 +79,43 @@
     }
 
     .ad-logo-link img {
-      height: 42px;
+      height: 40px;
       width: auto;
       object-fit: contain;
       display: block;
+    }
+
+    /* Product Switcher Tabs in Top Header */
+    .ad-product-nav {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding-left: 1rem;
+      border-left: 1px solid var(--border);
+    }
+
+    .ad-product-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.42rem 0.9rem;
+      border-radius: 9999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--foreground) !important;
+      text-decoration: none !important;
+      transition: all 0.18s ease;
+      white-space: nowrap;
+    }
+
+    .ad-product-link:hover {
+      background: rgba(122, 80, 42, 0.08);
+      color: var(--primary) !important;
+    }
+
+    .ad-product-link.active {
+      background: var(--primary);
+      color: #FFFFFF !important;
+      box-shadow: 0 3px 10px rgba(122, 80, 42, 0.22);
     }
 
     .ad-mobile-menu-btn {
@@ -97,13 +131,11 @@
       cursor: pointer;
     }
 
-    /* Centred Search Bar */
+    /* Search Bar */
     .ad-search-center {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      max-width: 480px;
+      flex: 1;
+      max-width: 420px;
+      margin-left: auto;
       z-index: 10;
     }
 
@@ -128,9 +160,9 @@
       background: #FFFFFF;
       border: 1px solid var(--border);
       border-radius: 9999px;
-      padding: 0.62rem 4.2rem 0.62rem 2.65rem;
+      padding: 0.58rem 4rem 0.58rem 2.6rem;
       font-family: var(--font-main);
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       color: var(--foreground);
       box-shadow: 0 2px 8px rgba(28, 53, 94, 0.04);
       outline: none;
@@ -148,14 +180,14 @@
 
     .ad-search-kbd {
       position: absolute;
-      right: 0.9rem;
+      right: 0.85rem;
       top: 50%;
       transform: translateY(-50%);
       background: var(--background);
       border: 1px solid var(--border);
       border-radius: 6px;
-      padding: 0.15rem 0.45rem;
-      font-size: 0.72rem;
+      padding: 0.12rem 0.42rem;
+      font-size: 0.7rem;
       font-weight: 600;
       color: var(--text-muted);
       pointer-events: none;
@@ -205,16 +237,16 @@
 
     .ad-search-item-title {
       font-weight: 700;
-      font-size: 0.95rem;
+      font-size: 0.94rem;
       color: var(--foreground);
     }
 
     .ad-search-item-badge {
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      padding: 0.15rem 0.5rem;
+      padding: 0.14rem 0.5rem;
       border-radius: 9999px;
       background: var(--bg-alt);
       color: var(--primary);
@@ -222,7 +254,7 @@
     }
 
     .ad-search-item-snippet {
-      font-size: 0.83rem;
+      font-size: 0.82rem;
       color: var(--text-muted);
       line-height: 1.45;
       margin: 0;
@@ -243,26 +275,30 @@
       font-size: 0.9rem;
     }
 
+    /* Mobile-only product switcher injected at top of sidebar drawer */
+    .ad-mobile-product-bar {
+      display: none;
+    }
+
     /* ========================================================
-       SIDEBAR (MATCHES ADMIN CENTRE DESIGN)
+       SIDEBAR (COLLAPSIBLE SECTIONS + ADMIN CENTRE PILLS)
        ======================================================== */
     .sidebar {
       top: var(--header-height) !important;
       background-color: var(--background) !important;
       border-right: 1px solid var(--border) !important;
-      padding: 1.25rem 0.85rem 2rem !important;
-      width: 280px !important;
+      padding: 1.1rem 0.85rem 3rem !important;
+      width: 295px !important;
       font-family: var(--font-main) !important;
     }
 
-    /* Hide default Docsify sidebar app-name & default toggle button */
     .sidebar > h1.app-name,
     .sidebar-toggle {
       display: none !important;
     }
 
     .sidebar-nav {
-      padding-bottom: 2rem;
+      padding-bottom: 2.5rem;
     }
 
     .sidebar-nav ul {
@@ -271,33 +307,62 @@
       list-style: none !important;
     }
 
-    /* Category Headings (START HERE, PRESENTER, ADMIN CENTRE) */
+    /* Collapsible Category Sections */
     .sidebar-nav > ul > li {
-      margin-bottom: 1.25rem !important;
+      margin-bottom: 0.65rem !important;
     }
 
     .sidebar-nav > ul > li > p,
     .sidebar-nav > ul > li > strong {
-      display: block !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
       color: #8C7360 !important;
       font-size: 0.72rem !important;
       font-weight: 700 !important;
       letter-spacing: 0.08em !important;
       text-transform: uppercase !important;
-      padding: 0 0.75rem !important;
-      margin: 0.5rem 0 0.45rem !important;
+      padding: 0.45rem 0.75rem !important;
+      margin: 0.25rem 0 0.2rem !important;
+      border-radius: 8px;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .sidebar-nav > ul > li > p:hover,
+    .sidebar-nav > ul > li > strong:hover {
+      background: rgba(122, 80, 42, 0.06);
+      color: var(--primary) !important;
+    }
+
+    .sidebar-nav > ul > li > p::after,
+    .sidebar-nav > ul > li > strong::after {
+      content: '▾';
+      font-size: 0.85rem;
+      opacity: 0.7;
+      transition: transform 0.2s ease;
+    }
+
+    .sidebar-nav > ul > li.ad-collapsed > p::after,
+    .sidebar-nav > ul > li.ad-collapsed > strong::after {
+      transform: rotate(-90deg);
+    }
+
+    .sidebar-nav > ul > li.ad-collapsed > ul {
+      display: none !important;
     }
 
     /* Sidebar Links */
     .sidebar-nav ul li a {
       display: block !important;
       color: var(--foreground) !important;
-      font-size: 0.92rem !important;
+      font-size: 0.9rem !important;
       font-weight: 500 !important;
       line-height: 1.4 !important;
       border-radius: 8px !important;
-      padding: 0.52rem 0.85rem !important;
-      margin: 0.15rem 0 !important;
+      padding: 0.48rem 0.85rem !important;
+      margin: 0.12rem 0 !important;
       border-right: none !important;
       text-decoration: none !important;
       transition: all 0.15s ease !important;
@@ -324,16 +389,16 @@
 
     /* Sub-headings table of contents inside sidebar */
     .sidebar-nav ul.app-sub-sidebar {
-      margin-top: 0.25rem !important;
-      margin-bottom: 0.5rem !important;
-      padding-left: 0.85rem !important;
+      margin-top: 0.2rem !important;
+      margin-bottom: 0.45rem !important;
+      padding-left: 0.8rem !important;
       border-left: 2px solid var(--border) !important;
       margin-left: 0.85rem !important;
     }
 
     .sidebar-nav ul.app-sub-sidebar li a {
-      font-size: 0.83rem !important;
-      padding: 0.35rem 0.65rem !important;
+      font-size: 0.82rem !important;
+      padding: 0.32rem 0.65rem !important;
       color: var(--text-muted) !important;
       background: transparent !important;
       box-shadow: none !important;
@@ -356,7 +421,7 @@
        ======================================================== */
     .content {
       top: var(--header-height) !important;
-      left: 280px !important;
+      left: 295px !important;
       padding-top: 1rem !important;
     }
 
@@ -723,8 +788,41 @@
     }
 
     /* ========================================================
-       MOBILE RESPONSIVENESS (< 768px)
+       RESPONSIVE & MOBILE OPTIMISATIONS
        ======================================================== */
+    @media (max-width: 960px) {
+      .ad-product-nav {
+        display: none;
+      }
+
+      .ad-mobile-product-bar {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.4rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.85rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .ad-mobile-product-bar a {
+        text-align: center;
+        padding: 0.45rem 0.5rem;
+        border-radius: 8px;
+        font-size: 0.82rem;
+        font-weight: 600;
+        text-decoration: none !important;
+        background: #FFFFFF;
+        border: 1px solid var(--border);
+        color: var(--foreground) !important;
+      }
+
+      .ad-mobile-product-bar a.active {
+        background: var(--primary);
+        border-color: var(--primary);
+        color: #FFFFFF !important;
+      }
+    }
+
     @media (max-width: 768px) {
       .ad-topbar {
         padding: 0 0.85rem;
@@ -740,8 +838,6 @@
       }
 
       .ad-search-center {
-        position: static;
-        transform: none;
         flex: 1;
         max-width: none;
       }
@@ -760,6 +856,7 @@
         transition: transform 0.25s ease !important;
         z-index: 190 !important;
         box-shadow: 8px 0 24px rgba(28, 53, 94, 0.12);
+        width: 285px !important;
       }
 
       body.ad-sidebar-open .sidebar {
@@ -803,9 +900,17 @@
       <a href="#/" class="ad-logo-link" aria-label="Alongside Digital Help Centre Home">
         <img src="public/logo.webp" onerror="this.src='docs/media/logo.webp'" alt="Alongside Digital">
       </a>
+
+      <!-- Clean Top Product Switcher -->
+      <nav class="ad-product-nav" id="adProductNav" aria-label="Product Documentation">
+        <a href="#/" class="ad-product-link" data-nav="home">Home</a>
+        <a href="#/presenter/install-windows" class="ad-product-link" data-nav="presenter">Presenter</a>
+        <a href="#/admin-centre/overview" class="ad-product-link" data-nav="admin-centre">Admin Centre</a>
+        <a href="#/support" class="ad-product-link" data-nav="support">Support</a>
+      </nav>
     </div>
 
-    <!-- Centred Instant Search -->
+    <!-- Instant Search -->
     <div class="ad-search-center">
       <div class="ad-search-box" id="adSearchBox">
         <span class="ad-search-icon">
@@ -823,8 +928,6 @@
         <div class="ad-search-results" id="adSearchResults"></div>
       </div>
     </div>
-
-    <div style="width: 40px;" aria-hidden="true"></div>
   </header>
 
   <div id="app">Loading Alongside Digital Help Centre...</div>
@@ -844,6 +947,80 @@
     // Dynamically resolve basePath so Docsify works on localhost, help.alongsidedigital.co.uk, and GitHub Pages (/help/)
     const rootDir = window.location.pathname.replace(/\/index\.html$/, '').replace(/\/+$/, '');
     const docsBasePath = (rootDir ? rootDir : '') + '/docs/';
+
+    function getActiveProduct(routePath) {
+      const p = (routePath || '').toLowerCase();
+      if (p.startsWith('/presenter')) return 'presenter';
+      if (p.startsWith('/admin-centre')) return 'admin-centre';
+      if (p.startsWith('/support')) return 'support';
+      return 'home';
+    }
+
+    function updateProductNavHighlight(routePath) {
+      const active = getActiveProduct(routePath);
+      document.querySelectorAll('[data-nav]').forEach(function (el) {
+        el.classList.toggle('active', el.getAttribute('data-nav') === active);
+      });
+    }
+
+    function enhanceSidebar(routePath) {
+      const sidebar = document.querySelector('.sidebar');
+      const sidebarNav = document.querySelector('.sidebar-nav');
+      if (!sidebar || !sidebarNav) return;
+
+      // 1. Inject mobile product switcher at top of drawer if not present
+      let mobileBar = sidebar.querySelector('.ad-mobile-product-bar');
+      if (!mobileBar) {
+        mobileBar = document.createElement('div');
+        mobileBar.className = 'ad-mobile-product-bar';
+        mobileBar.innerHTML =
+          '<a href="#/" data-nav="home">Home</a>' +
+          '<a href="#/presenter/install-windows" data-nav="presenter">Presenter</a>' +
+          '<a href="#/admin-centre/overview" data-nav="admin-centre">Admin Centre</a>' +
+          '<a href="#/support" data-nav="support">Support</a>';
+        sidebar.insertBefore(mobileBar, sidebar.firstChild);
+      }
+      updateProductNavHighlight(routePath);
+
+      // 2. Make top-level sidebar categories collapsible
+      const activeProduct = getActiveProduct(routePath);
+      const topGroups = sidebarNav.querySelectorAll(':scope > ul > li');
+      topGroups.forEach(function (li) {
+        const heading = li.querySelector(':scope > p, :scope > strong');
+        const subList = li.querySelector(':scope > ul');
+        if (!heading || !subList) return;
+
+        // Avoid double-binding click handlers
+        if (!heading.dataset.collapsibleBound) {
+          heading.dataset.collapsibleBound = 'true';
+          heading.addEventListener('click', function () {
+            li.classList.toggle('ad-collapsed');
+          });
+        }
+
+        // For Presenter's multi-section sidebar, auto-expand the active section and collapse inactive ones on route change
+        if (activeProduct === 'presenter') {
+          const hasActiveChild = !!li.querySelector('li.active');
+          if (hasActiveChild) {
+            li.classList.remove('ad-collapsed');
+          } else if (!li.dataset.userToggled) {
+            // Keep Installation & Getting Started open if nothing matched, otherwise keep only active group open
+            li.classList.add('ad-collapsed');
+          }
+        } else {
+          li.classList.remove('ad-collapsed');
+        }
+      });
+
+      // Fallback: if all Presenter groups collapsed (e.g. edge route), open the first two
+      if (activeProduct === 'presenter') {
+        const anyOpen = Array.from(topGroups).some(function (li) { return !li.classList.contains('ad-collapsed'); });
+        if (!anyOpen && topGroups.length > 0) {
+          topGroups[0].classList.remove('ad-collapsed');
+          if (topGroups[1]) topGroups[1].classList.remove('ad-collapsed');
+        }
+      }
+    }
 
     window.$docsify = {
       name: 'Alongside Digital Help Centre',
@@ -930,12 +1107,15 @@
 
           hook.doneEach(function () {
             document.body.classList.remove('ad-sidebar-open');
+            setTimeout(function () {
+              enhanceSidebar(vm.route.path);
+            }, 0);
           });
         }
       ]
     };
 
-    // Mobile drawer toggle
+    // Mobile drawer toggle & Global Multi-Sidebar Search Index
     document.addEventListener('DOMContentLoaded', function () {
       const toggleBtn = document.getElementById('adMobileToggle');
       if (toggleBtn) {
@@ -944,70 +1124,75 @@
         });
       }
 
-      // Build Instant Client-Side Search Index from _sidebar.md
       const searchInput = document.getElementById('adSearchInput');
       const searchResults = document.getElementById('adSearchResults');
       const searchBox = document.getElementById('adSearchBox');
       const pagesIndex = [];
 
       async function buildSearchIndex() {
-        try {
-          const sbRes = await fetch(docsBasePath + '_sidebar.md');
-          if (!sbRes.ok) return;
-          const sbText = await sbRes.text();
-          const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
-          const routes = [];
-          let m;
-          while ((m = linkRegex.exec(sbText)) !== null) {
-            const label = m[1].trim();
-            const route = m[2].trim();
-            if (!routes.some(function (r) { return r.route === route; })) {
-              routes.push({ label: label, route: route });
-            }
-          }
+        const sidebarFiles = ['_sidebar.md', 'presenter/_sidebar.md', 'admin-centre/_sidebar.md'];
+        const routes = [];
+        const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
 
-          await Promise.all(
-            routes.map(async function (item) {
-              const cleanRoute = item.route === '/' ? 'README.md' : item.route.replace(/^\//, '').replace(/\.md$/, '') + '.md';
-              try {
-                const res = await fetch(docsBasePath + cleanRoute);
-                if (!res.ok) return;
-                const raw = await res.text();
-                let title = item.label;
-                const fm = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
-                if (fm) {
-                  const tm = fm[1].match(/title:\s*(.+)/i);
-                  if (tm) title = tm[1].trim().replace(/^['"]|['"]$/g, '');
+        await Promise.all(
+          sidebarFiles.map(async function (sbFile) {
+            try {
+              const sbRes = await fetch(docsBasePath + sbFile);
+              if (!sbRes.ok) return;
+              const sbText = await sbRes.text();
+              let m;
+              while ((m = linkRegex.exec(sbText)) !== null) {
+                const label = m[1].trim();
+                const route = m[2].trim();
+                if (!routes.some(function (r) { return r.route === route; })) {
+                  routes.push({ label: label, route: route });
                 }
-                const plain = raw
-                  .replace(/^---\r?\n[\s\S]*?\r?\n---/, '')
-                  .replace(/<[^>]+>/g, ' ')
-                  .replace(/:::(tip|note|caution|danger)(\[[^\]]*\])?/g, ' ')
-                  .replace(/:::/g, ' ')
-                  .replace(/[#*`>|_-]/g, ' ')
-                  .replace(/\s+/g, ' ')
-                  .trim();
-
-                const category = item.route.indexOf('/presenter') === 0
-                  ? 'Presenter'
-                  : item.route.indexOf('/admin-centre') === 0
-                  ? 'Admin Centre'
-                  : 'Help Centre';
-
-                pagesIndex.push({
-                  title: title,
-                  route: '#' + (item.route.startsWith('/') ? item.route : '/' + item.route),
-                  category: category,
-                  text: plain
-                });
-              } catch (e) {
-                // ignore individual fetch errors
               }
-            })
-          );
-        } catch (err) {
-          console.warn('Search index build skipped:', err);
-        }
+            } catch (e) {
+              // skip missing sidebar
+            }
+          })
+        );
+
+        await Promise.all(
+          routes.map(async function (item) {
+            const cleanRoute = item.route === '/' ? 'README.md' : item.route.replace(/^\//, '').replace(/\.md$/, '') + '.md';
+            try {
+              const res = await fetch(docsBasePath + cleanRoute);
+              if (!res.ok) return;
+              const raw = (await res.text()).replace(/^\uFEFF/, '');
+              let title = item.label;
+              const fm = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+              if (fm) {
+                const tm = fm[1].match(/title:\s*(.+)/i);
+                if (tm) title = tm[1].trim().replace(/^['"]|['"]$/g, '');
+              }
+              const plain = raw
+                .replace(/^---\r?\n[\s\S]*?\r?\n---/, '')
+                .replace(/<[^>]+>/g, ' ')
+                .replace(/:::(tip|note|caution|danger)(\[[^\]]*\])?/g, ' ')
+                .replace(/:::/g, ' ')
+                .replace(/[#*`>|_-]/g, ' ')
+                .replace(/\s+/g, ' ')
+                .trim();
+
+              const category = item.route.indexOf('/presenter') === 0
+                ? 'Presenter'
+                : item.route.indexOf('/admin-centre') === 0
+                ? 'Admin Centre'
+                : 'Help Centre';
+
+              pagesIndex.push({
+                title: title,
+                route: '#' + (item.route.startsWith('/') ? item.route : '/' + item.route),
+                category: category,
+                text: plain
+              });
+            } catch (e) {
+              // ignore individual fetch errors
+            }
+          })
+        );
       }
 
       buildSearchIndex();

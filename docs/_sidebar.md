@@ -44,7 +44,3 @@
   * [Events, Services & RSVPs](/admin-centre/events-planning)
   * [Safeguarding & DBS Compliance](/admin-centre/safeguarding-dbs)
   * [Automated Reminders & Notifications](/admin-centre/notifications)
-
-* **Help & Support**
-  * [Help Centre Home](/)
-  * [Contact & Support](/support)

@@ -1174,14 +1174,13 @@
         }
       });
 
-      // 4. Add clean Contact Support box with help@alongsidedigital.co.uk below the product menus
+      // 4. Add clean Contact Support button with help@alongsidedigital.co.uk below the product menus
       if (!sidebar.querySelector('.ad-sidebar-support')) {
         const supportBox = document.createElement('div');
         supportBox.className = 'ad-sidebar-support';
         supportBox.innerHTML =
-          '<div class="ad-sidebar-support-label">Contact Support</div>' +
           '<a href="mailto:help@alongsidedigital.co.uk" class="ad-sidebar-support-btn">' +
-          '  <span>Email Our Team</span>' +
+          '  <span>Contact Support</span>' +
           '  <span class="ad-sidebar-support-email">help@alongsidedigital.co.uk</span>' +
           '</a>';
         sidebar.appendChild(supportBox);

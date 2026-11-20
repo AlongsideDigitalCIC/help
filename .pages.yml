@@ -59,7 +59,7 @@ content:
         type: rich-text
 
   - name: support
-    label: Contact & Support Page
+    label: Contact Support
     type: file
     path: docs/support.md
     fields:

@@ -64,7 +64,6 @@ Check our **[Sunday Morning Troubleshooter](/presenter/troubleshooting)** for fa
 
 ## Still Need a Hand?
 
-We are here to support your mission. If you can't find what you are looking for:
+We are here to support your mission. If you can't find what you are looking for, email our support team directly:
 
 * **Email Support:** [help@alongsidedigital.co.uk](mailto:help@alongsidedigital.co.uk)
-* **Visit Main Website:** [alongsidedigital.co.uk](https://alongsidedigital.co.uk)

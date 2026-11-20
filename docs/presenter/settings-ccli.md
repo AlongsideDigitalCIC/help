@@ -10,7 +10,7 @@ Presenter makes staying compliant with your **CCLI Church Copyright Licence** ef
 ## 1. Entering Your Church CCLI Licence Number
 
 1. Click the **Settings (gear icon)** in the top-right corner of Presenter.
-2. Select the **CCLI** tab.
+2. Select the **Song History & CCLI** tab.
 3. Enter your **Church CCLI License Number** (for example `1234567`).
 
 ---
@@ -33,7 +33,7 @@ You can also choose **Screen Footer Alignment** (**Bottom Left**, **Bottom Cente
 
 Presenter automatically logs every song projected live during your services. To export your report:
 
-1. Open **Settings &rarr; CCLI** and scroll down to **Song History & Annual CCLI Reporting**.
+1. Open **Settings &rarr; Song History & CCLI** and scroll down to **Song History & Annual CCLI Reporting**.
 2. Choose your **Reporting Date From** and **Reporting Date To**.
 3. Click **Export Song History to CSV**.
 

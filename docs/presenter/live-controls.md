@@ -19,21 +19,24 @@ Once your **Service Flow** is ready and your projector is configured in Extended
 ## 2. Black Screen (Instant Blanking)
 
 During a sermon, prayer, or transition when you want nothing projected on screen:
-* Click the **BLACK SCREEN** button beneath **GO LIVE** (or press the **`B`** key).
-* The projector smoothly fades to a clean black screen while keeping your place ready in the Service Flow.
-* Click **BLACK SCREEN** (or press **`B`**) again to bring the current slide right back up.
+* Click the **Black Screen** button beneath **GO LIVE** in the right-hand Live Controls panel.
+* The button switches to **Black Screen Active**, and the projector displays a clean black screen while keeping your place ready in the Service Flow.
+* Click **Black Screen Active** again to bring the current slide right back up.
 
 ---
 
-## 3. Useful Live Keyboard Shortcuts
+## 3. Keyboard Shortcuts for Slide Navigation
+
+When you are not typing inside a text input box, you can navigate the selected item's slides directly from your keyboard:
 
 | Shortcut | Action |
 | :--- | :--- |
-| `Space` or `Right Arrow` | Advance to the next slide |
+| `Space`, `Enter`, or `Right Arrow` | Advance to the next slide |
 | `Left Arrow` | Return to the previous slide |
-| `B` | Toggle **Black Screen** |
-| `C` | **Clear Text** (hides lyrics/text while keeping the background) |
-| `Esc` | Close the live audience window |
+| `Down Arrow` | Jump to the next section (e.g. Verse &rarr; Chorus) |
+| `Up Arrow` | Jump to the previous section |
+| `1` – `9` | Jump directly to slide 1–9 of the selected item |
+| `Esc` | Exit fullscreen on the projector window (when focused), or close an open Alert/Timer modal *(click **END LIVE** to close the live window)* |
 
 ---
 

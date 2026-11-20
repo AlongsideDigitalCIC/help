@@ -26,20 +26,24 @@ Before opening Presenter's projection window, verify your operating system displ
 
 ## 2. Opening the Audience Window in Presenter
 
-1. In the top-right toolbar of Presenter, click the **Display / Projector** icon.
-2. Select the display corresponding to your projector (usually labelled *Display 2*).
-3. Click **Go Live**.
-4. A full-screen, frameless window will appear on the projector displaying your active slide.
+1. Click the **Settings (gear icon)** in the top-right corner of Presenter.
+2. Under **Display & Transitions**, check **Projector Monitor Output** and select the display corresponding to your projector (or leave it on **Auto** to target your external screen automatically).
+3. Close Settings and click **GO LIVE** in the right-hand Live Controls panel.
+4. A full-screen, borderless window opens on the projector displaying your active slide. When your gathering finishes, click **END LIVE** to close the audience window.
 
 ---
 
 ## 3. Keyboard Shortcuts for Live Operation
 
+When you are not typing inside a text box, you can advance slides directly from your keyboard:
+
 | Shortcut | Action |
 | :--- | :--- |
-| `Space` or `Right Arrow` | Advance to the next slide |
+| `Space`, `Enter`, or `Right Arrow` | Advance to the next slide |
 | `Left Arrow` | Return to the previous slide |
-| `B` | **Blackout:** Turns the projector display completely black |
-| `C` | **Clear Text:** Hides the lyrics/scripture while retaining the background |
-| `L` | **Logo Screen:** Displays your church/organisation logo graphic |
-| `Esc` | Close the live projector output window |
+| `Down Arrow` | Jump to the next section (e.g. Verse &rarr; Chorus) |
+| `Up Arrow` | Jump to the previous section |
+| `1` – `9` | Jump directly to slide 1–9 of the selected item |
+| `Esc` | Exit fullscreen on the projector window (when focused), or close an open Alert/Timer modal *(click **END LIVE** to close the projector window)* |
+
+To blank the projector screen at any time, click the **Black Screen** button in the right-hand Live Controls panel.

@@ -3,7 +3,7 @@ title: Importing Your Song Library
 description: Migrate your existing worship song database from ProPresenter, FreeShow, OpenLP, Quelea, WorshipTools, EasyWorship, OpenSong, CCLI SongSelect, and more.
 ---
 
-Moving to Presenter does not mean starting your worship repertoire from scratch. The **Universal Song Library Importer** converts existing song libraries, databases, and lyric archives into Presenter's clean Markdown song format â€” preserving titles, authors, copyright lines, CCLI song numbers, verse/chorus sections, and slide flow arrangements.
+Moving to Presenter does not mean starting your worship repertoire from scratch. The **Universal Song Library Importer** converts existing song libraries, databases, and lyric archives into Presenter's clean Markdown song format — preserving titles, authors, copyright lines, CCLI song numbers, verse/chorus sections, and slide flow arrangements.
 
 ---
 
@@ -13,7 +13,7 @@ Make sure you have connected a local **Media Library** folder in Presenter first
 
 1. **Songs Tab:** Click **Songs** in the top navigation bar, then click the **Import** button next to **+ New**.
 2. **Drag & Drop Anywhere:** Drag song files, database files, `.zip` / `.qsp` packs, or an entire song folder directly onto the Presenter window.
-3. **Settings:** Open **Settings** (gear icon) &rarr; **Storage** &rarr; **Import Song Library**.
+3. **Settings:** Open **Settings** (gear icon) &rarr; **General Profile** &rarr; **Import Song Library**.
 4. **Single Song Editor:** When creating or editing a single song (**+ New** or **Edit Song**), click **Import File** to load a single file, or **Import Song Select** to paste copied CCLI SongSelect text straight from your clipboard.
 
 :::tip[1-Click Migration on Desktop]
@@ -51,7 +51,7 @@ Presenter supports **15+ church presentation formats**, databases, and archive t
 Find your previous presentation software below to see where its songs are stored and what to select in Presenter.
 
 ### ProPresenter 7 (and newer)
-* **No export needed** if migrating on the same computer â€” open the importer and click **Scan** next to ProPresenter, or click **Select Entire Folder** and choose:
+* **No export needed** if migrating on the same computer — open the importer and click **Scan** next to ProPresenter, or click **Select Entire Folder** and choose:
   * **Windows:** `Documents\ProPresenter\Libraries`
   * **macOS:** `Documents/ProPresenter/Libraries`
 * **Moving from another computer:** In ProPresenter, right-click your song library in the left sidebar and choose **Export** (as `.pro` files or a `.proBundle`), copy the files via USB or cloud drive, and drop them into Presenter.
@@ -115,9 +115,9 @@ Once Presenter finishes scanning your files, you will see a live preview before 
 * **Live Section & Flow Preview:** Click any song on the left to inspect its converted `[Verse]`, `[Chorus]`, and `[Bridge]` sections and slide `Flow` badges on the right.
 * **Strip Musical Chords:** Enabled by default. Toggle this off if your worship band prefers keeping inline chords inside the lyrics.
 * **Duplicates Control:** Any song whose title already exists in your library is badged with **Exists**. Choose how Presenter should handle matches:
-  * **Skip** *(Recommended)* â€” Keeps your existing Presenter song untouched and only imports brand-new songs.
-  * **Overwrite** â€” Replaces existing songs with the newly imported version.
-  * **Keep Both** â€” Saves the imported song alongside the original with a numbered suffix (e.g. `Amazing Grace (2)`).
+  * **Skip** *(Recommended)* — Keeps your existing Presenter song untouched and only imports brand-new songs.
+  * **Overwrite** — Replaces existing songs with the newly imported version.
+  * **Keep Both** — Saves the imported song alongside the original with a numbered suffix (e.g. `Amazing Grace (2)`).
 
 ---
 

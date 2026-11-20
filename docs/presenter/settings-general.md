@@ -1,30 +1,31 @@
 ---
 title: General, Storage & Network Settings
-description: Configure organisation logo, Media Library folder storage, Song Library Importer, Mobile Remote Control PIN, and privacy settings.
+description: Configure your organisation name, Media Library folder storage, Song Library Importer, Mobile Remote Control PIN, and privacy settings.
 ---
 
-Click the **Settings (gear icon)** in the top-right corner of Presenter to manage your organisation profile, storage folder, and network settings.
-
----
-
-## 1. General & Storage Tab
-
-* **Organisation Details & Logo:** Upload your church or community group logo to appear on your standby/logo screen.
-* **Media Library Storage Folder:** View or change the local folder where Presenter stores your `Songs`, `Images`, `Videos`, `Music`, `Bible`, and `Liturgy` folders.
-* **Import Song Library:** Launch the **[Universal Song Library Importer](/presenter/importing-songs)** directly from Settings to migrate songs from ProPresenter, FreeShow, OpenLP, Quelea, WorshipTools, EasyWorship, OpenSong, or SongSelect.
-* **Anonymous Diagnostic Telemetry:** Choose whether to share anonymous app version/OS stability statistics (no songs, lyrics, files, church names, or personal data are ever collected).
+Click the **Settings (gear icon)** in the top-right corner of Presenter to manage your organisation profile, storage folder, network remotes, and overlay defaults.
 
 ---
 
-## 2. Network Tab (Mobile Remote & Live Viewer)
+## 1. General Profile Tab
 
-* Toggle your local Wi-Fi remote server and copy or scan the QR code for smartphones and tablets on the same network.
-* Configure a **4-digit PIN** to ensure only authorised worship leaders or speakers can control your slides remotely.
+* **Church / Organisation Name:** Enter your church or community group name to display on output screens to confirm signal before going live.
+* **Change Library Folder:** View or change the local folder where Presenter stores your `Songs`, `Images`, `Videos`, `Music`, `Bible`, and `Liturgy` folders.
+* **Import Song Library:** Launch the **[Universal Song Library Importer](/presenter/importing-songs)** directly from Settings to migrate songs from ProPresenter, FreeShow, OpenLP, Quelea, WorshipTools, EasyWorship, OpenSong, or CCLI SongSelect.
+* **Anonymous Usage & Diagnostics:** Choose whether to share anonymous diagnostic telemetry (app version and operating system only—no songs, lyrics, files, church names, or personal details are ever collected).
+
+---
+
+## 2. Network & Remotes Tab
+
+* **Server Configuration:** Choose between your detected local hostname or IP address (or set a custom static IP/DNS base URL so QR codes stay consistent each week).
+* **Mobile Remote Control:** Scan the QR code or copy the **Remote Control URL** for smartphones and tablets on the same Wi-Fi network, and optionally set a **Remote PIN** to prevent unauthorised devices from controlling your presentation.
+* **Network Display Broadcast:** Scan or open the **Live Broadcast URL** on a secondary screen, overflow TV, or tablet to mirror live output in real time.
 * See **[Mobile Remote Control & Live Viewer](/presenter/remote-control)** for full connection instructions.
 
 ---
 
-## 3. Overlays Tab
+## 3. Announcements & Timer Tab
 
-* Customise the default text colour, background colour, placement, and timing of your **Screen Alerts** and **Countdown Timers**.
+* Customise the default text colour, background colour, placement, sizing, and backdrop of your **Screen Alerts** and **Pre-Service Countdown Timers**.
 * See **[Alerts & Countdown Timers](/presenter/alerts-and-timers)** for how to trigger them during a live gathering.

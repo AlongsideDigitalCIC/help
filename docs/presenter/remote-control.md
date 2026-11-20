@@ -7,25 +7,25 @@ Presenter includes a built-in local server that lets speakers, worship leaders, 
 
 ---
 
-## 1. Enabling Remote Control
+## 1. Finding Your Remote Control QR Code & Link
 
 1. Ensure the computer running Presenter and your mobile phone or tablet are connected to the **same Wi-Fi network**.
-2. In Presenter, click the **Mobile / Remote** icon in the top toolbar.
-3. Toggle **Enable Remote Server** to **ON**.
-4. A QR code and local web address (e.g., `http://192.168.1.45:8080`) will be displayed on screen.
+2. Click the **Settings (gear icon)** in the top-right corner of Presenter and open the **Network & Remotes** tab.
+3. Under **Mobile Remote Control**, Presenter displays a QR code and copyable **Remote Control URL** (served automatically on local port `5178`, e.g., `http://192.168.1.45:5178/?remoteControl=...`).
+4. *(Optional)* Enter a **Remote PIN** beneath the URL to prevent unauthorised devices on your Wi-Fi network from controlling your presentation.
 
 ---
 
 ## 2. Connecting from Your Phone or Tablet
 
-1. Open your smartphone camera or QR reader and scan the QR code.
-2. Alternatively, open Safari or Chrome on your phone and type the IP address shown in Presenter.
-3. The Presenter Mobile Controller web app will open instantlyâ€”no app store installation needed!
+1. Open your smartphone camera or QR reader and scan the QR code in **Settings &rarr; Network & Remotes**.
+2. Alternatively, copy or type the **Remote Control URL** into Safari or Chrome on your phone or tablet.
+3. The Presenter Mobile Remote Control web app opens immediately—no app store installation needed! If you configured a **Remote PIN**, enter it to unlock controls.
 
 ---
 
-## 3. Remote Features
+## 3. Remote & Network Display Features
 
-* **Controller View:** Large, touch-friendly **Next** and **Previous** buttons, slide previews, and quick buttons for Blackout (`B`) and Clear (`C`). Ideal for a speaker who wants to advance their own slides.
-* **Live Viewer:** Mirrors the live presentation output in real-time in any browser window.
-* **PIN Protection:** You can set a 4-digit PIN in settings to prevent unauthorized devices on the network from controlling your presentation.
+* **Mobile Remote Control:** Touch-friendly **Go Live / End Live Broadcast** button, **Next Slide** and **Previous Slide** controls, media **Play / Pause**, a **Black Screen** toggle button, tappable **Slides** thumbnails, quick **Dismiss / Stop Timer** controls when an Alert or Timer is active, and the full **Service Flow** list to switch items.
+* **Network Display Broadcast (Live Viewer):** In the same **Network & Remotes** tab, scan the **Network Display Broadcast** QR code or open the **Live Broadcast URL** on a secondary screen, overflow TV, or tablet to view the live presentation output in real time.
+* **PIN Protection:** Set a custom **Remote PIN** in **Settings &rarr; Network & Remotes**, and tap the lock icon at the top right of the mobile remote whenever you want to re-lock the session.

@@ -15,9 +15,9 @@ You click "Go Live" in Presenter, but the projector only shows your Windows/Mac 
 ### The 60-Second Fix
 1. Press `Windows Key + P` on your keyboard (or go to Mac **System Settings &rarr; Displays**).
 2. Check that **Extend** is selected (not *Duplicate*).
-3. In Presenter, click the **Display** icon in the top toolbar.
-4. If it shows *Display 1 (Primary)*, switch it to **Display 2 (External)** and click **Reconnect**.
-5. Check if your keyboard's `B` (Blackout) key was pressed accidentally. Press `B` again to restore projection.
+3. In Presenter, click the **Settings (gear icon)** in the top-right corner and open **Display & Transitions**.
+4. Under **Projector Monitor Output**, make sure your external screen is selected (or choose **Auto**), close Settings, and click **END LIVE** followed by **GO LIVE**.
+5. Check whether the **Black Screen** button in the right-hand Live Controls panel shows **Black Screen Active**—if so, click it once to restore projection.
 
 ---
 
@@ -42,19 +42,19 @@ Scanning the QR code produces a "Page Cannot Be Found" or loading spinner on you
 1. Confirm both your computer and phone are connected to the **exact same Wi-Fi network**.
    * *Note:* If your church has separate "Church-Guest" and "Church-Private" networks, both devices must be on the private network. Guest networks typically block devices from talking to each other (client isolation).
 2. Check Windows Firewall: If prompted, allow Presenter through private networks.
-3. Try typing the exact IP address manually into your browser (e.g., `http://192.168.1.100:8080`).
+3. Open **Settings (gear icon) &rarr; Network & Remotes**, copy the **Remote Control URL** (served on port `:5178`, e.g., `http://192.168.1.100:5178/?remoteControl=...`), and enter it directly in your phone's browser. If your hostname URL does not resolve on mobile, click **Use IP** under **Detected Network Addresses**.
 
 ---
 
 ## 4. Text or Lyrics Overflowing the Slide
 
 ### The Problem
-The text is too large or getting cut off at the bottom or sides of the projector.
+The text is too large or feels crowded on the projector screen.
 
 ### The 60-Second Fix
-1. In the slide editor, reduce the font size by 2â€“4 points.
-2. Hit `Enter` to split long sentences into two separate lines.
-3. Click the **Split Slide** button to turn a long verse into two manageable slides.
+1. In the centre preview toolbar, lower **Lines** (for songs/liturgy, e.g. from `4` down to `2`) or **Verses** (for Bible readings) so Presenter splits long stanzas across more slides automatically.
+2. Hover over an individual slide tile and click **Quick Fix** (or click **Edit Song**) to add line breaks or blank lines between stanzas.
+3. To adjust text sizing globally across every slide, open **Settings (gear icon) &rarr; Display & Transitions** and lower **Output Text Scale**.
 
 ---
 

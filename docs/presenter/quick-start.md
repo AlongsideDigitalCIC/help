@@ -16,13 +16,14 @@ Presenter is built to run smoothly on standard laptops and church AV computers:
 
 ---
 
-## 2. The 3 Main Areas of Presenter
+## 2. The 4 Main Areas of Presenter
 
 When you open Presenter, you will see a clean, distraction-free interface:
 
-1. **The Library (Left Sidebar):** Your stored songs, liturgy scripts, Bible passages, and media clips.
-2. **The Service Order (Centre Pane):** The sequence of items for your specific service or event (e.g. *Welcome &rarr; Opening Hymn &rarr; Reading &rarr; Sermon Slides*).
-3. **The Live Output & Preview (Right Pane):** What your operator sees (with preview slides) versus what is actively projected to the congregation.
+1. **Top Navigation Bar:** Switch between **Service** (your running order) and your **6 Library tabs** (**Songs**, **Images**, **Bible**, **Liturgy**, **Videos**, **Music**), plus **Settings (gear icon)** in the top-right corner.
+2. **Left Sidebar:** Shows either your active **Service Flow** (when **Service** is selected) or your browsable media library for the selected tab.
+3. **Centre Pane (Preview & Editor):** Shows every slide of the selected item so you can review, adjust lines/verses per slide, edit, or click **+ Add to Service**.
+4. **Right Panel (Live Controls):** Shows **Live Output Preview**, **Background Music**, **GO LIVE / END LIVE**, **Black Screen**, and **Screen Overlays** (**Alert** & **Timer**).
 
 ---
 
@@ -30,15 +31,17 @@ When you open Presenter, you will see a clean, distraction-free interface:
 
 ### Step 1: Add or Import Songs
 1. Click the **Songs** tab in the top bar to browse your local library, or click **Import** to bring over your existing songs from ProPresenter, FreeShow, OpenLP, Quelea, WorshipTools, EasyWorship, OpenSong, or CCLI SongSelect (see **[Importing Your Song Library](/presenter/importing-songs)**).
-2. Click any song to add it to your **Service Flow** on the left, or click **+ New** to create a new song from scratch.
+2. Select any song in the left sidebar to preview its slides in the centre pane, then click **+ Add to Service** (or click **+ New** to create a song from scratch or paste from CCLI SongSelect).
 
 ### Step 2: Add a Scripture Reading
-1. Click **+ Add Item &rarr; Scripture**.
-2. Select your translation (e.g. NIV, ESV, KJV).
-3. Type the reference (e.g., *Philippians 4:4-8*) and select **Insert**. Presenter will format the verses into readable slide chunks automatically.
+1. Click the **Bible** tab in the top bar.
+2. Select your translation from the dropdown list (online via YouVersion or any local offline Bible in your `Bible/` folder).
+3. Type the reference (e.g., *Philippians 4:4-8*) and click **FIND** (or press `Enter`), or use **Browse Books**.
+4. Review the formatted verse slides in the centre pane and click **Add Chapter to Service** (or select individual slides and click **Add Verses**).
 
 ### Step 3: Add Media or Announcements
-1. Drag and drop any image (PNG/JPG), video (MP4/WebM), or PDF deck directly into your order.
+1. Drag and drop any image (`PNG`/`JPG`/`WebP`), video (`MP4`/`WebM`), `PDF`, or PowerPoint (`.pptx`) deck onto Presenter to save it into your library folders.
+2. Open the **Images** or **Videos** tab, select the item, and click **+ Add to Service**.
 
 ---
 
@@ -46,13 +49,10 @@ When you open Presenter, you will see a clean, distraction-free interface:
 
 1. Connect your projector or external TV via HDMI, DisplayPort, or USB-C.
 2. In Windows/macOS display settings, ensure your display is set to **Extend** (not Duplicate).
-3. In Presenter, click the **Projector** icon in the top right.
-4. Choose your external screen and click **Start Presentation**.
-5. Use your keyboard's **Spacebar** or **Right Arrow** to advance through slides.
-
-:::tip[Sunday Morning Tip]
-Press the **B** key at any time to instantly blackout the screen, or **C** to clear lyrics while keeping the background image.
-:::
+3. Click the **Settings (gear icon)** in the top-right corner, open **Display & Transitions**, and confirm your external screen is selected under **Projector Monitor Output** (or leave on **Auto**).
+4. Close Settings and click **GO LIVE** in the right-hand Live Controls panel.
+5. Click any slide tile in the centre pane—or use your keyboard's **Spacebar**, **Enter**, or **Right Arrow**—to advance through slides.
+6. Whenever you want a blank black projector screen (for example during a sermon or prayer), click the **Black Screen** button in the right-hand Live Controls panel. Click it again to restore the live slide.
 
 ---
 
@@ -60,5 +60,6 @@ Press the **B** key at any time to instantly blackout the screen, or **C** to cl
 
 * [Importing Your Song Library](/presenter/importing-songs)
 * [Dual Screen & Display Setup](/presenter/presentation-mode)
-* [Song Library & CCLI SongSelect](/presenter/ccli-songs)
+* [Going Live, Black Screen & Shortcuts](/presenter/live-controls)
+* [Songs](/presenter/ccli-songs)
 * [Using the Mobile Remote Control](/presenter/remote-control)

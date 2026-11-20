@@ -14,7 +14,7 @@ Use **Alert** whenever you need to show a quick, unobtrusive message without int
 1. Click the **Alert** button under **SCREEN OVERLAYS**.
 2. Type your announcement message into the alert box.
 3. Click **Show Alert** to display the banner cleanly across the live projector screen.
-4. Click **Hide / Clear Alert** (or let the auto-hide duration expire if configured in **Settings &rarr; Overlays**) to remove it smoothly.
+4. Click **Hide / Clear Alert** (or let the auto-dismiss timer expire if configured) to remove it smoothly.
 
 ---
 
@@ -25,8 +25,8 @@ Use **Timer** before a service or after an interval to help people take their se
 1. Click the **Timer** button under **SCREEN OVERLAYS**.
 2. Enter your desired countdown duration (e.g. `5` minutes), optional heading (e.g. *"Service starts in"*), and end message (e.g. *"Welcome! Service starting shortly"*).
 3. Click **Start Timer**—the countdown displays cleanly on the projector and updates live in your **LIVE OUTPUT PREVIEW**.
-4. You can pause, reset, or stop the timer at any time from the same control panel.
+4. You can pause, resume, or click **Stop & Hide Timer** at any time from the same control panel.
 
 :::tip[Customise Default Alert & Timer Styles]
-You can set your church's preferred alert banner colours, position, font size, default countdown title, and countdown background once in **Settings &rarr; Overlays** so volunteers only need one click on Sunday morning.
+You can set your church's preferred alert banner colours, position, font size, default countdown title, and countdown background once in **Settings &rarr; Announcements & Timer** so volunteers only need one click on Sunday morning.
 :::

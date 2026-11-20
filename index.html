@@ -639,12 +639,18 @@
     /* ========================================================
        MOBILE-FIRST MAIN CONTENT AREA & TYPOGRAPHY
        ======================================================== */
+    /* Neutralise Docsify's mobile "body.close" slide-over so tapping a link never shifts the article */
+    main {
+      width: 100% !important;
+    }
+
     .content,
     body.close .content {
-      position: relative !important;
-      top: calc(var(--header-height) + env(safe-area-inset-top, 0px)) !important;
+      position: static !important;
+      top: auto !important;
       left: 0 !important;
-      padding-top: 0.5rem !important;
+      transform: none !important;
+      padding-top: calc(var(--header-height) + env(safe-area-inset-top, 0px) + 0.5rem) !important;
       max-width: 100%;
       overflow-x: clip;
     }
@@ -1323,6 +1329,7 @@
       .content,
       body.close .content {
         position: absolute !important;
+        top: var(--header-height) !important;
         left: 295px !important;
         right: 0 !important;
         padding-top: 1rem !important;

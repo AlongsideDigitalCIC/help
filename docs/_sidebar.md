@@ -28,7 +28,7 @@
     * [Going Live, Black Screen & Shortcuts](/presenter/live-controls)
     * [Alerts & Countdown Timers](/presenter/alerts-and-timers)
     * [Mobile Remote Control & Live Viewer](/presenter/remote-control)
-  * **Settings & Compliance**
+  * **Settings**
     * [Display, Fonts & Backgrounds](/presenter/settings-display)
     * [CCLI Licensing & Annual Reporting](/presenter/settings-ccli)
     * [General, Storage & Network Settings](/presenter/settings-general)

@@ -761,6 +761,40 @@
       margin: 1.5rem 0 2.5rem;
     }
 
+    /* 3-Column Platform Download Cards */
+    .ad-download-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.35rem;
+      align-items: stretch;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .ad-download-card {
+      padding: 1.6rem !important;
+    }
+
+    .ad-download-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin: 0.75rem 0 1.25rem;
+      flex-grow: 1;
+    }
+
+    .ad-btn-sm {
+      padding: 0.58rem 1rem !important;
+      font-size: 0.85rem !important;
+      width: 100%;
+      text-align: center;
+    }
+
+    @media (max-width: 960px) {
+      .ad-download-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     .ad-card {
       background: var(--card);
       border: 1px solid var(--border);
@@ -1190,9 +1224,9 @@
     window.$docsify = {
       name: 'Alongside Digital Help Centre',
       repo: '',
-      loadSidebar: '_sidebar.md?v=3',
+      loadSidebar: '_sidebar.md?v=4',
       alias: {
-        '/.*/_sidebar.md.*': '/_sidebar.md?v=3'
+        '/.*/_sidebar.md.*': '/_sidebar.md?v=4'
       },
       requestHeaders: {
         'cache-control': 'no-cache'
@@ -1280,11 +1314,42 @@
             document.body.classList.remove('ad-sidebar-open');
             setTimeout(function () {
               enhanceSidebar(vm.route.path);
+              hydratePresenterDownloads();
             }, 0);
           });
         }
       ]
     };
+
+    // Dynamically populate latest GitHub Release download URLs on the Presenter overview page (matches alongsidedigital.co.uk/products/presenter/download)
+    let cachedPresenterRelease = null;
+    async function hydratePresenterDownloads() {
+      const container = document.getElementById('adPresenterDownloads');
+      if (!container) return;
+      try {
+        if (!cachedPresenterRelease) {
+          const res = await fetch('https://api.github.com/repos/AlongsideDigitalCIC/presenter/releases/latest');
+          if (!res.ok) return;
+          cachedPresenterRelease = await res.json();
+        }
+        const assets = cachedPresenterRelease && Array.isArray(cachedPresenterRelease.assets) ? cachedPresenterRelease.assets : [];
+        container.querySelectorAll('a[data-ext]').forEach(function (link) {
+          const ext = link.getAttribute('data-ext');
+          const arch = link.getAttribute('data-arch') || '';
+          const match = assets.find(function (a) {
+            if (!a.name || !a.name.endsWith(ext)) return false;
+            if (arch === 'aarch64') return a.name.includes('aarch64') || a.name.includes('arm64');
+            if (arch === 'x64') return a.name.includes('x64') || a.name.includes('amd64') || a.name.includes('x86_64');
+            return true;
+          }) || assets.find(function (a) { return a.name && a.name.endsWith(ext); });
+          if (match && match.browser_download_url) {
+            link.href = match.browser_download_url;
+          }
+        });
+      } catch (e) {
+        // Fallback links to alongsidedigital.co.uk/products/presenter/download remain active
+      }
+    }
 
     // Mobile drawer toggle & Global Multi-Sidebar Search Index
     document.addEventListener('DOMContentLoaded', function () {

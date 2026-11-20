@@ -1,75 +1,69 @@
 ---
-title: Presenter Help Centre
-description: Complete guides for installing, setting up, and running live church services and community gatherings with Presenter.
+title: Presenter
+description: 100% free, offline-ready presentation software for churches, assemblies, and community gatherings.
 ---
 
-Welcome to the **Presenter Help Centre**. Choose a section below to jump straight to what you need, or use the sidebar on the left to browse every guide.
+**Presenter** is a 100% free, professional presentation application built by Alongside Digital CIC for churches, schools, charities, and community venues. Designed for multi-screen projection, fast volunteer onboarding, and rock-solid offline reliability, Presenter lets you project lyrics, scripture, liturgy, slides, videos, and music with total confidence—forever free with no subscriptions.
 
-<div class="ad-card-grid">
-  <div class="ad-card">
+---
+
+## Key Features
+
+* **Services & CCLI Reporting:** Save and load service plans week-to-week, reorder items by drag-and-drop, and export ready-to-submit CCLI CSV song history reports.
+* **Song Management & SongSelect:** Add songs manually, copy lyrics and copyright metadata straight from **CCLI SongSelect**, or migrate your entire library from ProPresenter, FreeShow, OpenLP, Quelea, WorshipTools, EasyWorship, or OpenSong.
+* **Integrated Bibles:** Look up scripture live via **YouVersion** or use cached **offline JSON Bibles** when your venue has no internet.
+* **Liturgy Builder:** Create and edit call-and-response prayers and readings with colour-coded roles for leaders, congregations, individuals, and groups.
+* **Video Playback:** Play local `.mp4`, `.webm`, and `.mov` video files alongside direct **YouTube** and **Vimeo** playback without leaving the app.
+* **Media & Presentations:** Project standalone graphics, image folders, **PDF** slide decks, and **PowerPoint (`.pptx`)** presentations with auto-advance options.
+* **Background Music:** Play gentle walk-in and prayer music playlists directly from your `Music/` library while projecting welcome slides.
+* **Countdown Timers & Screen Alerts:** Welcome your gathering with customisable countdown timers and display urgent on-screen alert banners without disrupting worship.
+* **Mobile Remote Control & Live Viewer:** Control slides from a smartphone or tablet over local Wi-Fi and mirror the live presentation stream to other devices.
+
+---
+
+## Supported Platforms & Downloads
+
+Download the latest release of Presenter from **[alongsidedigital.co.uk/products/presenter/download](https://alongsidedigital.co.uk/products/presenter/download)** or grab your installer directly below:
+
+<div class="ad-download-grid" id="adPresenterDownloads">
+  <div class="ad-card ad-download-card">
     <div class="ad-card-header">
-      <span class="ad-card-icon">1</span>
-      <h3>Installation &amp; Setup</h3>
+      <h3>Windows</h3>
     </div>
-    <p class="ad-card-desc">Download Presenter for your computer and link your local Media Library folder.</p>
-    <ul class="ad-card-links">
-      <li><a href="#/presenter/install-windows">Windows (10 &amp; 11)</a></li>
-      <li><a href="#/presenter/install-macos">macOS</a></li>
-      <li><a href="#/presenter/install-linux">Linux (AppImage, .deb, .rpm)</a></li>
-      <li><a href="#/presenter/media-folder-setup">Connecting Your Media Folder</a></li>
-    </ul>
-    <a href="#/presenter/install-windows" class="ad-card-cta">Start Installation &rarr;</a>
+    <p class="ad-card-desc">Windows 10 &amp; Windows 11 (64-bit)</p>
+    <div class="ad-download-actions">
+      <a href="https://alongsidedigital.co.uk/products/presenter/download" data-ext=".exe" data-arch="x64" target="_blank" rel="noopener noreferrer" class="ad-btn ad-btn-primary ad-btn-sm">Download .exe Installer</a>
+      <a href="https://alongsidedigital.co.uk/products/presenter/download" data-ext=".msi" data-arch="x64" target="_blank" rel="noopener noreferrer" class="ad-btn ad-btn-secondary ad-btn-sm">Download .msi Installer</a>
+    </div>
+    <a href="#/presenter/install-windows" class="ad-card-cta">Windows Install Guide &rarr;</a>
   </div>
 
-  <div class="ad-card">
+  <div class="ad-card ad-download-card">
     <div class="ad-card-header">
-      <span class="ad-card-icon">2</span>
-      <h3>Getting Started</h3>
+      <h3>macOS</h3>
     </div>
-    <p class="ad-card-desc">Tour the Presenter workspace and build your first presentation in 5 minutes.</p>
-    <ul class="ad-card-links">
-      <li><a href="#/presenter/application-overview">Application Overview</a></li>
-      <li><a href="#/presenter/quick-start">Quick Start: First 5-Minute Service</a></li>
-      <li><a href="#/presenter/importing-songs">Migrating an Existing Song Database</a></li>
-    </ul>
-    <a href="#/presenter/application-overview" class="ad-card-cta">Explore Presenter &rarr;</a>
+    <p class="ad-card-desc">Apple Silicon &amp; Intel Macs</p>
+    <div class="ad-download-actions">
+      <a href="https://alongsidedigital.co.uk/products/presenter/download" data-ext=".dmg" data-arch="aarch64" target="_blank" rel="noopener noreferrer" class="ad-btn ad-btn-primary ad-btn-sm">Download .dmg Installer</a>
+      <a href="https://alongsidedigital.co.uk/products/presenter/download" data-ext=".tar.gz" data-arch="aarch64" target="_blank" rel="noopener noreferrer" class="ad-btn ad-btn-secondary ad-btn-sm">Download .tar.gz</a>
+    </div>
+    <a href="#/presenter/install-macos" class="ad-card-cta">macOS Install Guide &rarr;</a>
   </div>
 
-  <div class="ad-card">
+  <div class="ad-card ad-download-card">
     <div class="ad-card-header">
-      <span class="ad-card-icon">3</span>
-      <h3>Adding Media to Your Library</h3>
+      <h3>Linux</h3>
     </div>
-    <p class="ad-card-desc">Add songs, slides, scripture, liturgies, videos, and background music.</p>
-    <ul class="ad-card-links">
-      <li><a href="#/presenter/ccli-songs">Songs (SongSelect, Manual, Editing &amp; Flow)</a></li>
-      <li><a href="#/presenter/library-images">Images, PDFs &amp; PowerPoint Decks</a></li>
-      <li><a href="#/presenter/scripture-bibles">Bible (Online &amp; Offline)</a></li>
-      <li><a href="#/presenter/liturgy">Liturgy (Creating &amp; Editing)</a></li>
-      <li><a href="#/presenter/library-videos">Videos &amp; Background Music</a></li>
-    </ul>
-    <a href="#/presenter/ccli-songs" class="ad-card-cta">Build Your Library &rarr;</a>
-  </div>
-
-  <div class="ad-card">
-    <div class="ad-card-header">
-      <span class="ad-card-icon">4</span>
-      <h3>Building &amp; Running a Service</h3>
+    <p class="ad-card-desc">Ubuntu, Debian, Fedora &amp; Universal</p>
+    <div class="ad-download-actions">
+      <a href="https://alongsidedigital.co.uk/products/presenter/download" data-ext=".AppImage" data-arch="x64" target="_blank" rel="noopener noreferrer" class="ad-btn ad-btn-primary ad-btn-sm">Download AppImage</a>
+      <a href="https://alongsidedigital.co.uk/products/presenter/download" data-ext=".deb" data-arch="x64" target="_blank" rel="noopener noreferrer" class="ad-btn ad-btn-secondary ad-btn-sm">Download .deb (Debian/Ubuntu)</a>
+      <a href="https://alongsidedigital.co.uk/products/presenter/download" data-ext=".rpm" data-arch="x64" target="_blank" rel="noopener noreferrer" class="ad-btn ad-btn-secondary ad-btn-sm">Download .rpm (Fedora)</a>
     </div>
-    <p class="ad-card-desc">Put your Service Flow together, connect a projector, and run smoothly live.</p>
-    <ul class="ad-card-links">
-      <li><a href="#/presenter/service-flow">Adding Songs to Your Service</a></li>
-      <li><a href="#/presenter/managing-services">Reordering, Saving &amp; Loading Services</a></li>
-      <li><a href="#/presenter/presentation-mode">Dual-Screen &amp; Projector Setup</a></li>
-      <li><a href="#/presenter/live-controls">Going Live, Black Screen &amp; Shortcuts</a></li>
-      <li><a href="#/presenter/alerts-and-timers">Alerts &amp; Countdown Timers</a></li>
-    </ul>
-    <a href="#/presenter/service-flow" class="ad-card-cta">Build Your Service &rarr;</a>
+    <a href="#/presenter/install-linux" class="ad-card-cta">Linux Install Guide &rarr;</a>
   </div>
 </div>
 
----
-
-:::caution[Need Urgent Sunday Morning Help?]
-Jump straight to the **[Sunday Morning Troubleshooter](/presenter/troubleshooting)** for 60-second fixes for projectors, audio, or mobile remote issues, or check **[Settings & CCLI Compliance](/presenter/settings-ccli)**.
+:::tip[All Releases & Main Website Download Page]
+You can also visit the official **[Presenter Download Page](https://alongsidedigital.co.uk/products/presenter/download)** or browse release notes on **[GitHub Releases](https://github.com/AlongsideDigitalCIC/presenter/releases/latest)**. Once installed, follow **[Connecting Your Media Folder](/presenter/media-folder-setup)** to set up your library.
 :::

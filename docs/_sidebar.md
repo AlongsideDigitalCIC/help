@@ -14,7 +14,7 @@
     * [Bible](/presenter/scripture-bibles)
     * [Liturgy](/presenter/liturgy)
     * [Videos](/presenter/library-videos)
-    * [Background Music](/presenter/library-music)
+    * [Music](/presenter/library-music)
   * **Building Your Service**
     * [Adding Songs to Your Service](/presenter/service-flow)
     * [Adding Images & Slide Decks](/presenter/service-images)

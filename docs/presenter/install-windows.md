@@ -3,7 +3,7 @@ title: Installing Presenter on Windows
 description: How to download and install Presenter on Windows 10 and Windows 11 (64-bit).
 ---
 
-Presenter is 100% free and runs natively on **Windows 10** and **Windows 11 (64-bit)**.
+Presenter runs natively on **Windows 10** and **Windows 11 (64-bit)**.
 
 ---
 
@@ -22,7 +22,7 @@ Presenter is 100% free and runs natively on **Windows 10** and **Windows 11 (64-
 2. Follow the on-screen installation wizard to choose your install location and create a Desktop shortcut.
 
 :::note[Windows SmartScreen Notice]
-Because Presenter is free, independent community software, Windows Defender SmartScreen may display *"Windows protected your PC"* on first run. Click **More info** and then **Run anyway** to proceed with the installation.
+Windows Defender SmartScreen may display *"Windows protected your PC"* when running a newly downloaded installer for the first time. Click **More info** and then **Run anyway** to proceed with the installation.
 :::
 
 ---

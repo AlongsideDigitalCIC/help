@@ -22,7 +22,7 @@ description: Practical, friendly guidance for church and community leaders, admi
       </span>
       <h3>Presenter</h3>
     </div>
-    <p class="ad-card-desc">100% free presentation software for worship services and live community gatherings.</p>
+    <p class="ad-card-desc">Presentation software for worship services, assemblies, and live community gatherings.</p>
     <ul class="ad-card-links">
       <li><a href="#/presenter/install-windows">Installation &amp; Media Folder Setup</a></li>
       <li><a href="#/presenter/application-overview">Application Overview &amp; Quick Start</a></li>

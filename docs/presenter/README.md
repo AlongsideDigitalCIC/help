@@ -1,9 +1,9 @@
 ---
 title: Presenter
-description: 100% free, offline-ready presentation software for churches, assemblies, and community gatherings.
+description: Offline-ready presentation software for churches, assemblies, and community gatherings.
 ---
 
-**Presenter** is a 100% free, professional presentation application built by Alongside Digital CIC for churches, schools, charities, and community venues. Designed for multi-screen projection, fast volunteer onboarding, and rock-solid offline reliability, Presenter lets you project lyrics, scripture, liturgy, slides, videos, and music with total confidence—forever free with no subscriptions.
+**Presenter** is a presentation application built by Alongside Digital CIC for churches, schools, charities, and community venues. Designed for multi-screen projection, fast volunteer onboarding, and reliable offline operation, Presenter lets you project lyrics, scripture, liturgy, slides, videos, and music with confidence.
 
 ---
 

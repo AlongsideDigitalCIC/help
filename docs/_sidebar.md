@@ -3,8 +3,8 @@
     * [Windows](/presenter/install-windows)
     * [macOS](/presenter/install-macos)
     * [Linux](/presenter/install-linux)
-    * [Connecting Your Media Folder](/presenter/media-folder-setup)
   * **Getting Started**
+    * [Connecting Your Media Folder](/presenter/media-folder-setup)
     * [Application Overview](/presenter/application-overview)
     * [Quick Start: First 5-Minute Service](/presenter/quick-start)
   * **Adding Media to Your Library**

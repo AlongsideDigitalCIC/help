@@ -1,16 +1,26 @@
 ---
 title: Installing Presenter on macOS
-description: How to download and install Presenter on Apple Silicon and Intel Mac computers.
+description: Download and install Presenter on Apple Silicon and Intel Mac computers.
 ---
 
-Presenter runs natively on modern **macOS** laptops and desktops.
+Presenter runs natively on **macOS** (Apple Silicon & Intel).
 
 ---
 
-## 1. Download the macOS Disk Image
+## 1. Download the macOS Installer
 
-1. Visit **[alongsidedigital.co.uk/products/presenter/download](https://alongsidedigital.co.uk/products/presenter/download)**.
-2. Under **macOS**, click **Download `.dmg`**.
+Download the macOS disk image directly below:
+
+<div class="ad-card ad-download-card ad-platform-download">
+  <div class="ad-card-header">
+    <h3>macOS</h3>
+  </div>
+  <p class="ad-card-desc">Apple Silicon &amp; Intel Macs</p>
+  <div class="ad-download-actions">
+    <a href="https://github.com/AlongsideDigitalCIC/presenter/releases/download/presenter-v1.0.6/presenter_1.0.6_aarch64.dmg" data-ext=".dmg" data-arch="aarch64" class="ad-btn ad-btn-primary ad-btn-sm">Download .dmg Installer</a>
+    <a href="https://github.com/AlongsideDigitalCIC/presenter/releases/download/presenter-v1.0.6/presenter_aarch64.app.tar.gz" data-ext=".tar.gz" data-arch="aarch64" class="ad-btn ad-btn-secondary ad-btn-sm">Download .tar.gz Archive</a>
+  </div>
+</div>
 
 ---
 
@@ -28,9 +38,3 @@ When opening Presenter for the very first time, macOS may ask you to confirm ope
 1. Open your **Applications** folder.
 2. **Right-click** (or `Control + Click`) on **Presenter** and choose **Open**.
 3. Click **Open** in the confirmation dialogue. You will only need to do this once.
-
----
-
-## Next Step
-
-Once Presenter opens, follow **[Connecting Your Media Folder](/presenter/media-folder-setup)** to set up where your songs and media are stored.

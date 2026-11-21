@@ -945,6 +945,16 @@
       padding: 1.35rem !important;
     }
 
+    .ad-platform-download {
+      max-width: 520px;
+      height: auto !important;
+      margin: 1rem 0 1.5rem;
+    }
+
+    .ad-platform-download .ad-download-actions {
+      margin-bottom: 0;
+    }
+
     .ad-download-actions {
       display: flex;
       flex-direction: column;
@@ -1379,7 +1389,7 @@
 
       <!-- Clean Top Product Switcher (Uses div + role="navigation" so Docsify never hijacks <nav> as .app-nav) -->
       <div class="ad-product-nav" id="adProductNav" role="navigation" aria-label="Product Documentation">
-        <a href="#/presenter/" class="ad-product-link" data-nav="presenter">Presenter</a>
+        <a href="#/presenter/install-windows" class="ad-product-link" data-nav="presenter">Presenter</a>
         <a href="#/admin-centre/overview" class="ad-product-link" data-nav="admin-centre">Admin Centre</a>
         <a href="mailto:help@alongsidedigital.co.uk" class="ad-product-link" title="Email help@alongsidedigital.co.uk">Contact Support</a>
       </div>
@@ -1452,7 +1462,7 @@
         mobileBar = document.createElement('div');
         mobileBar.className = 'ad-mobile-product-bar';
         mobileBar.innerHTML =
-          '<a href="#/presenter/" data-nav="presenter">Presenter</a>' +
+          '<a href="#/presenter/install-windows" data-nav="presenter">Presenter</a>' +
           '<a href="#/admin-centre/overview" data-nav="admin-centre">Admin Centre</a>';
         sidebar.insertBefore(mobileBar, sidebar.firstChild);
       }
@@ -1481,10 +1491,13 @@
           topHeading.addEventListener('click', function () {
             const wasCollapsed = topLi.classList.contains('ad-collapsed');
             topLi.classList.toggle('ad-collapsed');
-            // When opening a product from another section/home, navigate directly to its hub
             if (wasCollapsed) {
-              if (isPresenterGroup && getActiveProduct(window.location.hash.replace(/^#/, '')) !== 'presenter') {
-                window.location.hash = '#/presenter/';
+              if (isPresenterGroup) {
+                // Always expand Installation (Windows / macOS / Linux) when expanding Presenter
+                const firstSub = topSubList.querySelector(':scope > li.ad-sub-group');
+                if (firstSub) {
+                  firstSub.classList.remove('ad-collapsed');
+                }
               } else if (isAdminGroup && getActiveProduct(window.location.hash.replace(/^#/, '')) !== 'admin-centre') {
                 window.location.hash = '#/admin-centre/overview';
               }
@@ -1555,9 +1568,10 @@
     window.$docsify = {
       name: 'Alongside Digital Help Centre',
       repo: '',
-      loadSidebar: '_sidebar.md?v=10',
+      loadSidebar: '_sidebar.md?v=11',
       alias: {
-        '/.*/_sidebar.md.*': '/_sidebar.md?v=10'
+        '/.*/_sidebar.md.*': '/_sidebar.md?v=11',
+        '/presenter/?': '/presenter/install-windows.md'
       },
       requestHeaders: {
         'cache-control': 'no-cache'
@@ -1674,11 +1688,11 @@
       });
     }
 
-    // Dynamically populate latest GitHub Release download URLs on the Presenter overview page (matches alongsidedigital.co.uk/products/presenter/download)
+    // Dynamically populate latest GitHub Release download URLs on the platform installation pages
     let cachedPresenterRelease = null;
     async function hydratePresenterDownloads() {
-      const container = document.getElementById('adPresenterDownloads');
-      if (!container) return;
+      const links = document.querySelectorAll('.markdown-section a[data-ext]');
+      if (!links.length) return;
       try {
         if (!cachedPresenterRelease) {
           const res = await fetch('https://api.github.com/repos/AlongsideDigitalCIC/presenter/releases/latest');
@@ -1686,7 +1700,7 @@
           cachedPresenterRelease = await res.json();
         }
         const assets = cachedPresenterRelease && Array.isArray(cachedPresenterRelease.assets) ? cachedPresenterRelease.assets : [];
-        container.querySelectorAll('a[data-ext]').forEach(function (link) {
+        links.forEach(function (link) {
           const ext = link.getAttribute('data-ext');
           const arch = link.getAttribute('data-arch') || '';
           const match = assets.find(function (a) {
@@ -1700,7 +1714,7 @@
           }
         });
       } catch (e) {
-        // Fallback links to alongsidedigital.co.uk/products/presenter/download remain active
+        // Direct GitHub release fallback links remain active
       }
     }
 
@@ -1735,7 +1749,7 @@
       const pagesIndex = [];
 
       async function buildSearchIndex() {
-        const sidebarFiles = ['_sidebar.md?v=10'];
+        const sidebarFiles = ['_sidebar.md?v=11'];
         const routes = [];
         const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
 

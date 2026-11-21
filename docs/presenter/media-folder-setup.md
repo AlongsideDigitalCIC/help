@@ -30,9 +30,9 @@ If your service leader prepares slides at home and your AV volunteer runs them o
 ## 2. Changing Your Media Folder Later
 
 You can switch to a different library folder at any time:
-1. Click the **Settings** (gear icon) in the top-right corner of Presenter.
-2. Open the **General** tab.
-3. Under **Storage**, click **Change Library Folder** and select your new folder.
+1. Click the **Settings (gear icon)** in the top-right corner of Presenter.
+2. Open the **General Profile** tab.
+3. Under **Storage & Song Migration**, click **Change Library Folder** and select your new folder.
 
 ---
 

@@ -23,7 +23,7 @@ description: Offline-ready presentation software for churches, assemblies, and c
 
 ## Supported Platforms & Downloads
 
-Download the latest release of Presenter from **[alongsidedigital.co.uk/products/presenter/download](https://alongsidedigital.co.uk/products/presenter/download)** or grab your installer directly below:
+Download the latest release of Presenter:
 
 <div class="ad-download-grid" id="adPresenterDownloads">
   <div class="ad-card ad-download-card">
@@ -63,7 +63,3 @@ Download the latest release of Presenter from **[alongsidedigital.co.uk/products
     <a href="#/presenter/install-linux" class="ad-card-cta">Linux Install Guide &rarr;</a>
   </div>
 </div>
-
-:::tip[All Releases & Main Website Download Page]
-You can also visit the official **[Presenter Download Page](https://alongsidedigital.co.uk/products/presenter/download)** or browse release notes on **[GitHub Releases](https://github.com/AlongsideDigitalCIC/presenter/releases/latest)**. Once installed, follow **[Connecting Your Media Folder](/presenter/media-folder-setup)** to set up your library.
-:::

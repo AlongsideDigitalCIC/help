@@ -1,9 +1,9 @@
 ---
-title: Sunday Morning Troubleshooter
-description: Quick, 60-second fixes for common live presentation issues.
+title: Troubleshooting
+description: Fixes for common projector, audio, remote control, and slide issues in Presenter.
 ---
 
-If you are setting up right before a service or event and something isn't working, follow these quick diagnostic steps.
+If something isn't working as expected, follow these steps to diagnose and fix common issues.
 
 ---
 
@@ -12,7 +12,7 @@ If you are setting up right before a service or event and something isn't workin
 ### The Problem
 You click "Go Live" in Presenter, but the projector only shows your Windows/Mac wallpaper or remains black.
 
-### The 60-Second Fix
+### The Fix
 1. Press `Windows Key + P` on your keyboard (or go to Mac **System Settings &rarr; Displays**).
 2. Check that **Extend** is selected (not *Duplicate*).
 3. In Presenter, click the **Settings (gear icon)** in the top-right corner and open **Display & Transitions**.
@@ -26,9 +26,9 @@ You click "Go Live" in Presenter, but the projector only shows your Windows/Mac 
 ### The Problem
 The video plays on screen, but no audio comes through the venue speakers or sound desk.
 
-### The 60-Second Fix
+### The Fix
 1. Click the Windows or Mac speaker icon in your system tray and make sure the audio output is set to your HDMI connection or audio interface.
-2. Check the volume slider inside Presenter's video player panel.
+2. Check the volume slider directly below **Live Output Preview** in Presenter's right-hand Live Controls panel, and make sure the speaker icon is not muted.
 3. Verify that your external mixer or amplifier channel is unmuted and the fader is up.
 
 ---
@@ -38,7 +38,7 @@ The video plays on screen, but no audio comes through the venue speakers or soun
 ### The Problem
 Scanning the QR code produces a "Page Cannot Be Found" or loading spinner on your mobile browser.
 
-### The 60-Second Fix
+### The Fix
 1. Confirm both your computer and phone are connected to the **exact same Wi-Fi network**.
    * *Note:* If your church has separate "Church-Guest" and "Church-Private" networks, both devices must be on the private network. Guest networks typically block devices from talking to each other (client isolation).
 2. Check Windows Firewall: If prompted, allow Presenter through private networks.
@@ -51,7 +51,7 @@ Scanning the QR code produces a "Page Cannot Be Found" or loading spinner on you
 ### The Problem
 The text is too large or feels crowded on the projector screen.
 
-### The 60-Second Fix
+### The Fix
 1. In the centre preview toolbar, lower **Lines** (for songs/liturgy, e.g. from `4` down to `2`) or **Verses** (for Bible readings) so Presenter splits long stanzas across more slides automatically.
 2. Hover over an individual slide tile and click **Quick Fix** (or click **Edit Song**) to add line breaks or blank lines between stanzas.
 3. To adjust text sizing globally across every slide, open **Settings (gear icon) &rarr; Display & Transitions** and lower **Output Text Scale**.

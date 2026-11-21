@@ -123,6 +123,6 @@ Once Presenter finishes scanning your files, you will see a live preview before 
 
 ## Related Guides
 
-* [Song Library & CCLI SongSelect](/presenter/ccli-songs)
+* [Songs](/presenter/ccli-songs)
 * [Presenter Quick Start Guide](/presenter/quick-start)
-* [Sunday Morning Troubleshooter](/presenter/troubleshooting)
+* [Troubleshooting](/presenter/troubleshooting)

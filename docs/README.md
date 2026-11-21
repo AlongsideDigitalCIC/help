@@ -54,14 +54,6 @@ description: Practical, friendly guidance for church and community leaders, admi
 
 ---
 
-## Sunday Morning Urgent Support
-
-:::caution[Having trouble right before a live gathering or service?]
-Check our **[Sunday Morning Troubleshooter](/presenter/troubleshooting)** for fast, 60-second solutions to common projector, audio, or slide issues.
-:::
-
----
-
 ## Still Need a Hand?
 
 We are here to support your mission. If you can't find what you are looking for, email our support team directly:

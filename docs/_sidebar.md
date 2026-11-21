@@ -33,7 +33,7 @@
     * [CCLI Licensing & Annual Reporting](/presenter/settings-ccli)
     * [General, Storage & Network Settings](/presenter/settings-general)
   * **Troubleshooting**
-    * [Sunday Morning 60-Second Fixes](/presenter/troubleshooting)
+    * [Common Issues & Fixes](/presenter/troubleshooting)
 
 * **Admin Centre**
   * [Platform Overview](/admin-centre/overview)

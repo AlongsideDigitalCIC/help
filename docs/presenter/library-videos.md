@@ -24,7 +24,7 @@ When your church has a reliable internet connection, you can also load online vi
 3. Presenter automatically fetches the video title for you (you can also type a custom title).
 4. Click to preview the video, then click **+ Add to Service** to include it in your Service Flow.
 
-:::caution[Sunday Morning Reliability Tip]
+:::caution[Reliability Tip]
 Online videos depend on your venue's internet connection. Whenever you have permission to download a video (such as a charity appeal video or baptism reflection), saving it as an `.mp4` inside `Presenter\Videos\` guarantees smooth, buffer-free playback even if church Wi-Fi drops.
 :::
 
